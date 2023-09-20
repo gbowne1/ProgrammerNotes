@@ -1,0 +1,19 @@
+# GitHub files
+
+These are the GitHub special files:
+
+`README.md`
+`LICENSE`
+`CHANGELOG.md`
+`SUPPORT.md`
+`SECURITY.md`
+`CODE_OF_CONDUCT.md`
+`CONTRIBUTING.md`
+`CONTRIBUTORS.md`
+`AUTHORS.md`
+`ACKNOWLEDGMENTS.md`
+`CODEOWNERS`
+`ISSUE_TEMPLATE`
+`PULL_REQUEST_TEMPLATE`
+`CITATION.cff`
+`FUNDING.yml`

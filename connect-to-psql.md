@@ -3,7 +3,7 @@ To connect to PostgreSQL, the command in the console/terminal/shell is `psql -U 
 
 To create a Database, use `CREATE DATABASE databasename`
 
-This command connects to the "gbowne1" database using the "gbowne1" user 
+This command connects to the "gbowne1" database using the "gbowne1" user
 
 `psql -d gbowne1 -U gbowne1`
 
@@ -21,13 +21,10 @@ The PostgreSQL port is 5432
 
 `\du` will list the users
 
-
 `sudo -u postgres createuser --interactive --pwprompt` will use the interative prompts to create a user.
 
 The PostgreSQL has several configuration files:
 
 - pg_hba.conf
 - postgresql.conf
-- 
-
-
+-

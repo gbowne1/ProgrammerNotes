@@ -1,3 +1,4 @@
+# Making a devcontainer
 
 A `.devcontainer` is a configuration file used by the Visual Studio Code Dev Containers extension to create a development environment inside a container. This allows developers to work in a consistent and isolated environment regardless of the host operating system or dependencies installed on the host machine
 
@@ -13,8 +14,7 @@ It is typically stored in a `.devcontainer` directory or folder in the root of a
 
 The `.devcontainer` configuration file can be placed inside a `.devcontainer` folder or directory in the root of a project and it is not recommended to place it inside the `.vscode` folder.
 
-Here is the documentation for .devcontainer for more reading: 
-https://code.visualstudio.com/docs/devcontainers/containers
+Here is the documentation for .devcontainer for more reading:
+<https://code.visualstudio.com/docs/devcontainers/containers>
 
 This is the extension to install: `ms-vscode-remote.remote-containers`
-

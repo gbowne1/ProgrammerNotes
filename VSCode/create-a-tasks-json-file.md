@@ -15,7 +15,8 @@ Here is the file structure:
  // See https://go.microsoft.com/fwlink/?LinkId=733558
  // for the documentation about the tasks.json format
  "version": "2.0.0",
-    "tasks": [{
+    "tasks": [
+    {
      "type": "",
      "label": "",
      "command": "",
@@ -26,6 +27,17 @@ Here is the file structure:
      "presentation": "",
      "dependsOn": "",
      "isBackground": "",
-    ],
+     }
+  ],
 }
 ```
+
+In `type`: The type of task to be executed. 
+
+The supported types are `"shell"`, `"process"`, `"npm"`, `"grunt"`, `"gulp"`, `"jake"`, `"msbuild"`, `"xcodebuild"`, `"ant"`, `"gradle"`, `"lein"`, `"make"`, `"pdflatex"`, `"python"`, `"ruby"`, `"gcc"`, `"clang"`, `"tsc"`, `"dotnet"`, `"docker-build"`, `"docker-run"`, `"docker-push"`, `"docker-compose"`, `"dart"`, `"dart-analyze"`, `"dart-test"`, `"dart-run"`, `"flutter"`, `"flutter-analyze"`, `"flutter-test"`, and `"flutter-run"`.
+
+In `group`: A string or an object that specifies the group to which the task belongs.
+
+The supported groups are `"build"`, `"test"`, `"deploy"`, `"clean"`, `"rebuildAll"`, `"buildAll"`, `"testAll"`, `"run"`, `"preview"`, `"install"`, `"uninstall"`, `"configure"`, `"update"`, `"watch"`, `"lint"`, `"format"`, `"extensionDevelopment"`, `"docker"`, `"docker-compose"`, `"remote-ssh"`, `"remote-containers"`, `"remote-wsl"`, `"remote-ssh-edit"`, `"remote-containers-edit"`, and `"remote-wsl-edit"`.
+
+The order of properties in `tasks.json` does not matter. You can define the properties in any order you like, as long as they are valid JSON syntax

@@ -4,7 +4,7 @@ You can create your own `package.json` file.  Yes, running `npm init -y` or `npm
 
 You can use this template.
 
-Some things were meant to be only used for when you set "private" to "false" and contri
+Some things were meant to be only used for when you are publishing a package to npm (when you set private to "false").
 
 ```json
 {

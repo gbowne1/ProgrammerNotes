@@ -6,7 +6,7 @@ To use a `.devcontainer` in Visual Studio Code, you need to have the Dev Contain
 
 The `.devcontainer` file is a JSON file that specifies the container image to use, the environment variables to set, the extensions to install, and other configuration options for the container. The file is similar to the `launch.json` file used for debugging configurations
 
-It is worth noting that running the full Visual Studio Code in Windows/Linux containers is not supported, but running with the Dev Containers extension is supported. When using the Dev Containers extension, the Visual Studio Code server is running in the container while the Visual Studio Code client is on the desktop.
+It is worth noting that running the full Visual Studio Code in Windows/Linux containers is not supported, but running with the Visual Studio Code extension is supported. When using the  extension, the Visual Studio Code server is running in the container while the Visual Studio Code client is on the desktop.
 
 The `.devcontainer` configuration file is a JSON file that specifies the container image to use, the environment variables to set, the extensions to install, and other configuration options for the container
 
@@ -14,7 +14,25 @@ It is typically stored in a `.devcontainer` directory or folder in the root of a
 
 The `.devcontainer` configuration file can be placed inside a `.devcontainer` folder or directory in the root of a project and it is not recommended to place it inside the `.vscode` folder.
 
-Here is the documentation for .devcontainer for more reading:
+Here is the documentation for `.devcontainer` for more reading:
 <https://code.visualstudio.com/docs/devcontainers/containers>
 
 This is the extension to install: `ms-vscode-remote.remote-containers`
+
+Here is an example `devcontainer.json` file:
+
+```json
+{
+  "name": "TypeScript & Node.js",
+  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:0-14",
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  }
+}
+```
+
+Looks kind of like a `settings.json` and a `extensions.json` file made into one file.  

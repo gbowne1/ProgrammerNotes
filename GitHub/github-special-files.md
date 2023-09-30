@@ -40,6 +40,8 @@ This is a special file that sets the GitHub project repository up so t
 
 `ISSUE_TEMPLATE`
 
+This can be a file or a folder/directory.
+
 `PULL_REQUEST_TEMPLATE`
 
 `CITATION.cff`

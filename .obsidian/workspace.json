@@ -57,14 +57,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dotnet/dotnet-sdk-stuff.md",
+                "file": "VSCode/what-is-devcontainer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4d8153ef2d067638",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GitHub/github-special-files.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "369d0b03c1027976",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Python/python3-development.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -130,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dotnet/dotnet-sdk-stuff.md",
+                "file": "Python/python3-development.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "dotnet/dotnet-sdk-stuff.md",
+                "file": "Python/python3-development.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "dotnet/dotnet-sdk-stuff.md"
+                "file": "Python/python3-development.md"
               }
             }
           }
@@ -191,12 +215,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "465f7c367cbe16f9",
+  "active": "369d0b03c1027976",
   "lastOpenFiles": [
-    "Backend/connect-to-mongodb-database.md",
-    "dotnet/dotnet-sdk-stuff.md",
-    "python3-development.md",
+    "Python/python3-notes.md",
+    "Python/python3-development.md",
+    "GitHub/create-a-workflow.md",
+    "GitHub/github-special-files.md",
+    "Python",
+    "Backend/create-a-basic-express-server.md",
+    "API/create-an-api.md",
+    "API/json-implementation.md",
+    "C_and_Cpp_Programming/compile-commands.md",
+    "C_and_Cpp_Programming/cmake-tutorial.md",
+    "Docker/dockerfiles.md",
+    "VSCode/create-a-jsconfig-json-file.md",
+    "React_Development/react-server-apache2.md",
+    "React_Development/react-development-notes.md",
     "VSCode/what-is-devcontainer.md",
+    "dotnet/dotnet-sdk-stuff.md",
+    "Backend/connect-to-mongodb-database.md",
     "VSCode/create-a-tasks-json-file.md",
     "connect-to-psql.md",
     "configure-prettier.md",
@@ -206,18 +243,9 @@
     "json-file-structure.md",
     "dotnet",
     "VSCode/extension-suggestion.md",
-    "GitHub/create-a-workflow.md",
-    "React_Development/react-development-notes.md",
-    "VSCode/create-a-jsconfig-json-file.md",
-    "GitHub/github-special-files.md",
-    "API/create-an-api.md",
     "Node_JavaScript_Programming/make-a-package-json-file.md",
-    "C_and_Cpp_Programming/compile-commands.md",
     "C_and_Cpp_Programming/create-cmakelists.md",
-    "C_and_Cpp_Programming/cmake-tutorial.md",
-    "Backend/create-a-basic-express-server.md",
     "Backend",
-    "IRC.md",
     "Docker"
   ]
 }

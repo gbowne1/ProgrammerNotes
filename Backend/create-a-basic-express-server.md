@@ -1,6 +1,6 @@
 # Express Server
 
-This is the code that would create a basic ExpressJS server.
+This is the code that would create a basic ExpressJS server, which connects to a MongoDB database
 
 ```js
 const express = require('express');

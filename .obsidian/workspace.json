@@ -81,7 +81,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/python3-development.md",
+                "file": "C_and_Cpp_Programming/create-a-makefile.md",
                 "mode": "source",
                 "source": false
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Python/python3-development.md",
+                "file": "C_and_Cpp_Programming/create-a-makefile.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python/python3-development.md",
+                "file": "C_and_Cpp_Programming/create-a-makefile.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -194,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Python/python3-development.md"
+                "file": "C_and_Cpp_Programming/create-a-makefile.md"
               }
             }
           }
@@ -217,8 +217,10 @@
   },
   "active": "369d0b03c1027976",
   "lastOpenFiles": [
-    "Python/python3-notes.md",
+    "README.md",
+    "Docker/dockerfiles.md",
     "Python/python3-development.md",
+    "Python/python3-notes.md",
     "GitHub/create-a-workflow.md",
     "GitHub/github-special-files.md",
     "Python",
@@ -227,7 +229,6 @@
     "API/json-implementation.md",
     "C_and_Cpp_Programming/compile-commands.md",
     "C_and_Cpp_Programming/cmake-tutorial.md",
-    "Docker/dockerfiles.md",
     "VSCode/create-a-jsconfig-json-file.md",
     "React_Development/react-server-apache2.md",
     "React_Development/react-development-notes.md",
@@ -244,7 +245,6 @@
     "dotnet",
     "VSCode/extension-suggestion.md",
     "Node_JavaScript_Programming/make-a-package-json-file.md",
-    "C_and_Cpp_Programming/create-cmakelists.md",
     "Backend",
     "Docker"
   ]

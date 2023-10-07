@@ -1,0 +1,75 @@
+# About manifest.json
+
+The manifest.json file is a JSON document that contains startup parameters and application defaults for when a web application is launched
+
+. It is used to describe aspects of an app, including its name, window size, transparency settings, and more basic settings6
+. The format of the manifest.json file is a JSON object with several optional members at its root, which can appear in any order1
+. Some of the key properties and keys of the manifest.json file include:
+
+    displayName: The name of the component that will be shown in the editor
+    defaultWidth: The width of a new component instance
+    defaultHeight: The height of a new component instance
+    resizeX: A boolean that determines whether the component can be resized horizontally2
+    background_color: The background color of the web app
+    dir: The directionality of the web app
+    display: The display mode of the web app
+    icons: An array of icons that the web app should use
+    lang: The language of the web app
+    name: The name of the web app
+    orientation: The orientation of the web app
+    start_url: The URL that should be opened when the web app is launched
+	id: The ID of the web app
+    scope: The scope of the web app
+    manifest_version: Targets the manifest version you are working on
+    type: Declares the type of application
+    meta: An object that contains metadata about the app
+    dependencies: A collection of packages required for your project
+
+Developers interested in validating manifest documents can find an unofficial JSON schema for the manifest format at:
+
+<https://www.w3.org/TR/appmanifest/>
+
+At a minimum, a manifest file should contain the following manifest members: "name", "lang", and "start_url".
+
+An example manifest.json,
+
+```json
+{
+  "name": "My Web App",
+  "displayName": "My Web App",
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en-US",
+  "orientation": "portrait",
+  "start_url": "/",
+  "id": "com.example.mywebapp",
+  "scope": "/",
+  "manifest_version": 2,
+  "type": "web_app",
+  "meta": {
+    "author": "John Doe",
+    "description": "A simple web app",
+    "version": "1.0.0"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "defaultWidth": 800,
+  "defaultHeight": 600,
+  "resizeX": true
+}
+```

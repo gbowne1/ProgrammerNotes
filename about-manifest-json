@@ -18,7 +18,7 @@ The manifest.json file is a JSON document that contains startup parameters and a
     name: The name of the web app
     orientation: The orientation of the web app
     start_url: The URL that should be opened when the web app is launched
-	id: The ID of the web app
+ id: The ID of the web app
     scope: The scope of the web app
     manifest_version: Targets the manifest version you are working on
     type: Declares the type of application

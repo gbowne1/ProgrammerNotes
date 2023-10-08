@@ -35,4 +35,26 @@ Here is an example `devcontainer.json` file:
 }
 ```
 
-Looks kind of like a `settings.json` and a `extensions.json` file made into one file.  
+Looks kind of like a `settings.json` and a `extensions.json` file made into one file.
+
+There are other properties it will take:
+
+there are other allowed fields besides name, image, extensions, and settings in the devcontainer.json file. Here are some additional fields that can be used:
+
+- dockerComposeFile: Specifies the Docker Compose file to use to create the container
+
+- postCreateCommand: Specifies a command to run after the container is created
+
+- remoteUser: Specifies the user to use when connecting to the container
+
+- runArgs: Specifies additional arguments to pass to the docker run command when creating the container
+
+- workspaceFolder: Specifies the path to the workspace folder inside the container
+
+- appPort: Specifies the port number that the application inside the container is listening on
+
+- forwardPorts: Specifies a list of ports to forward from the container to the host
+
+These fields can be used to further customize the development container to fit your needs. For more information on the devcontainer.json file and its fields, refer to the official documentation.
+
+<https://code.visualstudio.com/docs/devcontainers/create-dev-container>

@@ -29,11 +29,20 @@ It generally looks like this in Linux:
    "cStandard": "c11",
    "cppStandard": "c++17",
    "compilerArgs": "",
-   "browse": "",
+   "browse": {
+        "path": [
+        "${workspaceFolder}/**",
+        "/usr/local/include",
+        "/usr/include/x86_64-linux-gnu",
+        "/usr/include"
+        ]
+   },
    "compileCommands": "",
-   "forcedInclude": "",
-   "intelliSenseMode": "gcc-x64",
-   "configurationProvider": "ms-vscode.cmake-tools"
+   "forcedInclude": [],
+   "limitSymbolsToIncludedHeaders": true,
+   "intelliSenseMode": "linux-gcc-x86",
+   "configurationProvider": "ms-vscode.cmake-tools",
+   "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
    }
   ],
  "version": 4

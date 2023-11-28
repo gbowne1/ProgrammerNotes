@@ -18,13 +18,12 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-	res.json({ message: 'Hello, world!' });
+ res.json({ message: 'Hello, world!' });
 });
 
 app.listen(3000, () => {
-	console.log('Server listening on port 3000');
+ console.log('Server listening on port 3000');
 });
 ```
 
 This code creates a new Express app, defines a single route for the root URL that returns a JSON response, and starts the server on port 3000. You can test this API by running the server and visiting `http://localhost:3000` in your web browser or using a tool like Postman to send a GET request to the same URL. Note that this example uses the latest version of Node.js (v18) and Express (v4). If you need to use an older version of Node.js or Express, you may need to modify the code accordingly.
-

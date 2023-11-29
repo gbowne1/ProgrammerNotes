@@ -8,11 +8,40 @@ JavaScript, often abbreviated as JS, is a high-level, interpreted programming la
 
 ## ES5, ES6, and ES7
 
-ECMAScript 5 (ES5) was the fifth edition of the ECMAScript standard, which JavaScript is based on. It introduced many new features and improvements to the language. ES6, also known as ECMAScript 2015, brought significant enhancements to JavaScript, including arrow functions, classes, and template literals. ES7, or ECMAScript 2016, and subsequent versions continued to add new features and improvements to the language.
+ECMAScript 5 (ES5) was the fifth edition of the ECMAScript standard, which JavaScript is based on. It introduced many new features and improvements to the language. ES6, also known as ECMAScript 2015, brought significant enhancements to JavaScript, including arrow functions, classes, and template literals. ES7, or ECMAScript 2016, and subsequent versions continued to add new features and improvements to the language
+
+The differences between ES5, ES6, and ES7 in JavaScript can be summarized as follows:
+ES5:
+
+    Introduction: Also known as ECMAScript 2009, released in 2009.
+    Variables: Only one way to define variables using the var keyword.
+    Performance: Lower performance compared to ES6.
+    Object Manipulation: Time-consuming compared to ES6.
+    Function Definition: Both function and return keywords are used to define a function.
+    Support: Supports primitive data types such as string, number, boolean, null, and undefined.
+
+ES6:
+
+    Introduction: Also known as ECMAScript 2015, released in 2015.
+    Variables: Introduces two new ways to define variables: let and const.
+    Performance: Higher performance than ES5.
+    Object Manipulation: Less time-consuming compared to ES5.
+    Function Definition: Introduces arrow functions, eliminating the need for the function keyword in some cases.
+    Data Types: Adds a new primitive data type, symbol, for supporting unique values.
+
+ES7:
+
+    Introduction: Also known as ECMAScript 2016.
+    Features: Builds upon ES6 and introduces new features such as async/await, exponentiation operator, and more.
+    Transpilation: Requires transpilation to convert ES7 code to ES5 for compatibility with browsers.
+    Spread Operator: Introduces the spread operator (...) for merging arrays and objects.
+    Template Literal: Introduces template literals using backticks (`) for easy string interpolation.
 
 ## Learning JavaScript
 
-To start learning JavaScript, it's important to understand the basic syntax and concepts of the language. Once you have a good grasp of the fundamentals, you can explore the new features introduced in ES6 and ES7. These features include:
+To start learning JavaScript, it's important to understand the basic syntax and concepts of the language. Once you have a good grasp of the fundamentals, you can explore the new features introduced in ES6 and ES7.
+
+These features include:
 
 - Arrow functions
 - Classes
@@ -38,6 +67,14 @@ Fundamentals: Understanding the basic syntax, data types, and control structures
 
 - Functions: Mastering the concept of functions, including arrow functions introduced in ES6.
 
+Arrow Functions only exist in ES6 and ES7 Javascript.
+
+Here is an example of an arrow function:
+
+    ```js
+    var multiply = (x, y) => x * y;
+    ```
+
 - Objects: Understanding object-oriented programming in JavaScript, including object creation, manipulation, and ES6 class syntax.
 
 - Prototypes: Learning about prototypes and inheritance in JavaScript, a fundamental concept in ES5 and ES6.
@@ -52,4 +89,4 @@ Fundamentals: Understanding the basic syntax, data types, and control structures
 
 - Modules: Understanding the concept of modules for organizing and importing/exporting code, a feature introduced in ES6 for improved modularity and reusability.
 
-## 
+##

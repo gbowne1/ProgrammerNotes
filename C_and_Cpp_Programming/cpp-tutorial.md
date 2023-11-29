@@ -152,10 +152,9 @@ In C++, the keywords "for," "while," "if," "new," "else," "switch," "case," "del
 "default" keyword is used within a "switch" statement to specify the code to be executed if no case matches.
 "return" keyword is used to exit a function and return a value to the caller
 
-1. 'switch`, `case`, `break` and `default` are typically used together.
+1. 'switch`,`case`,`break` and `default` are typically used together.
 2. `while` sets up a loop condition.
 3. `if` and `else` is typically used together in a if-else statement to do conditional checking
-4.
 
 ## C++ String literals
 
@@ -191,7 +190,6 @@ Usage: Structs are commonly used for creating pure data structures, where the fo
 
 In object-oriented programming, using structs for pure data structures is not a bad idea, as it provides a convenient way to work with related variables. However, it's important to consider the design and purpose of the data structure when deciding whether to use a struct or a class.
 
-
 Here is an example of a C++ struct:
 
 ```cpp
@@ -223,7 +221,6 @@ Example void:
 
 ```
 
-
 ## C++ enum
 
 n C++, an enum, or enumeration, is a user-defined data type that allows you to create a new data type with a fixed range of possible values. It provides a way to define and group integral constants, making the code easy to maintain and less complex. Enums are generally used when you expect a variable to select one value from a set of possible values, increasing abstraction and enabling you to focus more on values rather than worrying about how to store them. They are helpful for code documentation and readability purposes
@@ -243,5 +240,28 @@ enum MyEnum {
 };
 ```
 
-In this first example, "season" is the name of the enumeration, and "spring," "summer," "autumn," and "winter" are the values of type "season." By default, "spring" is 0, "summer" is 1, and so on. You can also change the default value of an enum element during declaration if necessary2
-. Enums are used to restrict data to certain values and provide it in a human-readable format. They are vital for any project where you need to work with a fixed set of values, such as game development or managing states of objects
+In this first example, "season" is the name of the enumeration, and "spring," "summer," "autumn," and "winter" are the values of type "season." By default, "spring" is 0, "summer" is 1, and so on. You can also change the default value of an enum element during declaration if necessary
+
+Enums are used to restrict data to certain values and provide it in a human-readable format. They are vital for any project where you need to work with a fixed set of values, such as game development or managing states of objects
+
+## Compiled C++ code
+
+In C++, when you compile a source file, it is converted into an object file. The object files resulting from the compilation of multiple source files are then linked into an executable, a shared library, or a static library. Here are the differences between the common compiled object files in C++:
+
+- `a.out` file: This is the default name of the executable file produced by the compiler if no other name is specified. It is the final output of the linking step when compiling C++ source files
+
+- `.bin` file: In C++, there is no standard file format for binary files. The .bin extension is often used for generic binary files, but it is not specific to C++ object files
+
+- `.obj` file: This is the standard extension for object files in the Windows environment. Object files contain machine code and are the result of compiling C++ source files. They are later linked to produce an executable or a library
+
+Other common compiled object files: In addition to the above, C++ also uses shared libraries (.so files in Unix-based systems, .dll files in Windows) and static libraries (.a files in Unix-based systems, .lib files in Windows) for modularizing code and reusing it across different programs also .exe files.
+
+It's important to note that object files created with different compilers are generally not binary-compatible due to differences in implementation-defined details such as the size and alignment of data types
+
+Therefore, when distributing precompiled C++ libraries, it is often expected that the same compiler will be used for linking to ensure binary compatibility
+
+Understanding the compilation and linking steps in C++ is crucial for efficient code development and debugging
+
+Each C++ source file needs to be compiled into an object file, and the resulting object files are then linked into an executable, a shared library, or a static library
+
+Additionally, C++ also uses shared libraries (.so files in Unix-based systems, .dll files in Windows) and static libraries (.a files in Unix-based systems, .lib files in Windows) for modularizing code and reusing it across different programs.

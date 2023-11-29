@@ -45,4 +45,3 @@ For example, to publish port 80 on the container to port 8080 on the host machin
 `docker run -p 8080:80 myimage`
 
 When specifying dependencies in a Dockerfile, it is important to avoid some common mistakes, such as using the latest tag for the base image, installing unnecessary packages, and not cleaning up after package installations
-

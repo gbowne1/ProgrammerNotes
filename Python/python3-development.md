@@ -1,5 +1,11 @@
 # Create a Python program
 
+In Python, a program usually starts with importing python libraries with
+
+```py
+include
+```
+
 The configuration files used for Black, Flake8, Pylint, and Pytest are as follows:
 
 - Black: Black only supports the TOML file format for its configuration, which should be placed in the root of your project. Compatible configuration files for other tools can be found in the provided examples

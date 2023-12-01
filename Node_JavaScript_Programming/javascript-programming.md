@@ -1,6 +1,6 @@
 # Introduction to JavaScript Programming
 
-JavaScript is a versatile and widely-used programming language that is essential for web development. It allows developers to create interactive and dynamic content on websites. Whether you are using a Mac, Linux, or Windows computer, JavaScript is a fundamental skill for anyone interested in programming.
+JavaScript is a versatile and widely-used programming language that is essential for web development, but can still be used effectively outside of . It allows developers to create interactive and dynamic content on websites. Whether you are using a Mac, Linux, or Windows computer, JavaScript is a fundamental skill for anyone interested in programming.
 
 ## Understanding JavaScript
 
@@ -89,4 +89,14 @@ Here is an example of an arrow function:
 
 - Modules: Understanding the concept of modules for organizing and importing/exporting code, a feature introduced in ES6 for improved modularity and reusability.
 
-##
+## Javascript program / application entrypoint
+
+The typical filenames for JavaScript program entry points are "index.js," "app.js," and "main.js".
+
+These names are commonly used, but the choice is ultimately up to the developer. According to the
+Google JavaScript Style Guide, file names for JavaScript must be all lowercase and may include
+underscores or dashes, but no additional punctuation, and the filename extension must be .js.
+
+Some JavaScript frameworks will require certain entrypoint filenames.
+
+## 

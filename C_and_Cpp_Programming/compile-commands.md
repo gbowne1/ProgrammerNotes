@@ -2,8 +2,9 @@
 
 There is a file called `compile_commands.json`
 
-`compile_commands.json` is a JSON-formatted file that contains structured data about every compilation unit in a project. It specifies how to replay single compilations independently of the build system1
-. The file consists of an array of "command objects," where each command object specifies one way a translation unit is built
+`compile_commands.json` is a JSON-formatted file that contains structured data about every compilation unit in a project. It specifies how to replay single compilations independently of the build system
+
+The file consists of a JSON array of "command objects" where each command object specifies one way a translation unit is built.
 
 The compile_commands.json file is used by various tools, such as IDEs and static analysis tools, to obtain information about the build process, such as include paths and compilation flags, that is necessary for their operation
 

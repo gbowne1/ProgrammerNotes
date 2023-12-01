@@ -1,10 +1,12 @@
 # package.json file
 
-You can create your own `package.json` file.  Yes, running `npm init -y` or `npm init` will do it for you but it might be missing some fields, keys, properties and other things you might find useful.
+You can create your own `package.json` file.  Yes, running `npm init -y` or `npm init` will do it for you but it might be missing some fields, keys, properties and other things you might find useful, and unless you are creating a package to be listed on npmjs, I would suggest just making the file manually.
 
-You can use this template.
+You can use this template to start with
 
-Some things were meant to be only used for when you are publishing a package to npm (when you set private to "false").
+Some things were meant to be only used for when you are publishing a package to npm (when you set private to "false") so you can just remove those.
+
+Here's a step-by-step guide to creating a package.json file:
 
 ```json
 {
@@ -58,7 +60,22 @@ Some things were meant to be only used for when you are publishing a package to 
 Notes:
 
  1. "name" must be a string longer than 1 character
- 2. "exports" must be a file path pattern that will match the pattern of "^\./".
+ 2. "exports" must be a file path pattern that will match the pattern of `"^\./"`
  3. "funding" must be a URI for the fund
 
-You really won't need most of these for most projects unless you are going to publish to yarn, npm or pnpm
+You really won't need most of these for most projects unless you are going to publish to yarn, npm or pnpm.
+
+The package.json file is essential for managing and installing packages. It lists the packages your project depends on, specifies the versions of a package that your project can use using semantic versioning rules, and makes your build reproducible, and therefore easier to share with other developers
+
+If you expect to create many package.json files, and intend to use `npm init`, you can customize the questions asked and fields created during the init process so all the package.json files contain a standard set of information. In your home directory, you can create a file called .npm-init.js to customize the npm init questionnaire.
+
+There are a number of these keys and properties that should be used in all or most package.json files, and I believe some are required.  From the research I have done, there is no particular order required.
+
+"name":  This is the name of your package and it must be a string longer that 1 character in the double quotes.
+
+"keywords":  This is recommended, especially if you list your package on npmjs
+
+"version": The "version" in the package.json file is the version of the package.
+The "version" field in the package.json file must be in the form x.x.x and follow the semantic versioning guidelines
+
+"main": This the entry point filename for your program, library or application, usually app.js, index.js

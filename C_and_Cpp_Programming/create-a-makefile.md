@@ -1,11 +1,13 @@
 # Makefile
 
-A Makefile is a file that contains a set of instructions used by the `make` utility to build and manage a C or C++ project. It specifies the dependencies between the source files and the commands needed to build the executable. The make utility reads the Makefile and determines which files need to be recompiled based on the dependencies and the timestamps of the files. It then executes the necessary commands to build the executable. A Makefile typically includes the following:
+A Makefile is a file that contains a set of instructions used by the `make` utility to build and manage a C or C++ project. It specifies the dependencies between the source files and the commands needed to build the executable. The make utility reads the Makefile and determines which files need to be recompiled based on the dependencies and the timestamps of the files. It then executes the necessary commands to build the executable.
 
-    A list of source files
-    Compiler flags and options
-    Rules for building object files and the executable
-    Dependencies between the source files and the object files
+A Makefile typically includes the following:
+
+- A list of source files
+- Compiler flags and options
+- Rules for building object files and the executable
+- Dependencies between the source files and the object files
 
 Makefiles are used to simplify the build process and automate the compilation of large projects. They help to avoid the need to manually compile each source file and link them together. Instead, the make utility reads the Makefile and determines which files need to be recompiled based on the dependencies and the timestamps of the files. Makefiles are commonly used in Unix-based systems, but they can also be used in other operating systems. They are especially useful for large projects with many source files and dependencies. To use a Makefile, you need to run the make utility from the command line. The make utility reads the Makefile and determines which files need to be recompiled based on the dependencies and the timestamps of the files. It then executes the necessary commands to build the executable. Overall, Makefiles are an important tool for managing and building C or C++ projects, especially for large projects with many source files and dependencies.
 

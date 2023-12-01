@@ -254,9 +254,13 @@ In C++, when you compile a source file, it is converted into an object file. The
 
 - `.obj` file: This is the standard extension for object files in the Windows environment. Object files contain machine code and are the result of compiling C++ source files. They are later linked to produce an executable or a library
 
+- `.o` file: Also an object file.
+
+- `.s` file: Assembly output of the compiler's compilation phase and have a ".s" extension. They contain the assembly code generated from source
+
 Other common compiled object files: In addition to the above, C++ also uses shared libraries (.so files in Unix-based systems, .dll files in Windows) and static libraries (.a files in Unix-based systems, .lib files in Windows) for modularizing code and reusing it across different programs also .exe files.
 
-It's important to note that object files created with different compilers are generally not binary-compatible due to differences in implementation-defined details such as the size and alignment of data types
+It's important to note that object files created with different compilers are generally not binary-compatible due to differences in implementation-defined details such as the size and alignment of data types.
 
 Therefore, when distributing precompiled C++ libraries, it is often expected that the same compiler will be used for linking to ensure binary compatibility
 
@@ -265,3 +269,5 @@ Understanding the compilation and linking steps in C++ is crucial for efficient 
 Each C++ source file needs to be compiled into an object file, and the resulting object files are then linked into an executable, a shared library, or a static library
 
 Additionally, C++ also uses shared libraries (.so files in Unix-based systems, .dll files in Windows) and static libraries (.a files in Unix-based systems, .lib files in Windows) for modularizing code and reusing it across different programs.
+
+In C or C++, .o files are object files that are created when a non-header file is compiled. They contain binary code that is "almost" executable. These files are the output of the compiler and input to the linker/librarian. On the other hand, .so files are shared object files that are created when you want to share code between different executables. They are essentially shared libraries and are used for dynamic linking. In C or C++, both .o and .so files exist. The .o files are used during the construction of the executable, while the .so files are used for dynamic linking and sharing code between different executables

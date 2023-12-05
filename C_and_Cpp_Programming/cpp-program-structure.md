@@ -20,6 +20,10 @@ In the main directory, create a main.cpp file. This will be the entrypoint to yo
 
 From here you can and should try and modularize your program and its code.
 
+This refers to the practice of dividing code into smaller, independent, and cohesive units that perform specific tasks or functions. These units, often called modules, components, or classes, allow for better organization, reusability, and maintainability of the code. Modular programming emphasizes separating the functionality of a program into independent, interchangeable modules, with each module containing everything necessary to execute only one aspect of the desired functionality.
+
+When it comes to C++, modular programming involves dividing a computer program into separate sub-programs or modules, each containing the necessary code to execute a specific aspect of the program's functionality. This approach allows for better management of large programs, increased maintainability, readability of the code, and ease of making changes in the future or correcting errors
+
 Modularizing a C++ project's code offers several benefits. It makes the code easier to read, understand, and maintain by separating it into functions or modules, with each dealing with a specific aspect of the overall functionality.
 
 This approach also reduces the chances of conflicts when multiple developers are working on the same codebase, leading to improved collaboration and productivity. Additionally, modularization can enhance code reusability, which is beneficial for future projects. However, it's important to note that excessive modularization can lead to code that is overly complex and difficult to manage, so at minimum try to be consistent.
@@ -35,7 +39,7 @@ This separation helps in organizing the code and allows for better reusability a
 
 The decision to use a /src/ and /src/include/ directory versus a /include and a separate /src/ directory can depend on various factors. One advantage of the former is that it reduces the maintenance overhead for clients of the library, as they only need to be aware of one include directory, which reduces the risk of header name collisions
 
-It also benefits implementors, as they can change the layout of their src directory without worrying about breaking library clients
+It also benefits implementors, as they can change the layout of their src directory without worrying about breaking library clients.
 
 Additionally, it may have a small influence on build times, as having a smaller size folder with includes could potentially make the build process slightly faster.
 
@@ -46,16 +50,18 @@ The decision to use a /src/ and /src/include/ directory versus a /include and a 
 Disadvantages of using a /src/ and /src/include/ directory:
 
 - Complexity: It can add complexity to the project structure, especially for smaller projects
+
 - Build System Configuration: It may require additional configuration in the build system to specify the include paths
+
 - Verbose Include Paths: It can lead to verbose include paths, especially when using fine-grained modularization
 
 How it can improve code organization:
 
-    Reduces Maintenance Overhead: It reduces the maintenance overhead for clients of the library, as they only need to be aware of one include directory, reducing the risk of header name collisions
+- Reduces Maintenance Overhead: It reduces the maintenance overhead for clients of the library, as they only need to be aware of one include directory, reducing the risk of header name collisions
 
-    Easier Reorganization: It makes it easier to reorganize the layout of the src directory without affecting library clients
+- Easier Reorganization: It makes it easier to reorganize the layout of the src directory without affecting library clients
 
-    Influence on Build Times: It may have a small influence on build times, as having a smaller size folder with includes could potentially make the build process slightly faster
+- Influence on Build Times: It may have a small influence on build times, as having a smaller size folder with includes could potentially make the build process slightly faster
 
 In the end, the choice between the two approaches is often a matter of preference and depends on the specific needs of the project. Both methods are valid, and it ultimately depends on the coding style and organizational preferences of the development team.
 
@@ -86,3 +92,5 @@ The best practices for class files can be considered:
 This will help you or anyone else working with your project maintain your project multiple class files in a practical and maintainable fashion, it is important to follow best practices such as separating declaration and definition, organizing code into namespaces, managing dependencies, adopting new language features like modules, maintaining a consistent coding style, and implementing unit tests.
 
 If you are working with someone elses C++ project, do your best to try and follow the code style they have used. It is usually reasonably easy to spot how the project is laid out.
+
+If you are developing a C++ program that will be compiled to run on different platforms like O

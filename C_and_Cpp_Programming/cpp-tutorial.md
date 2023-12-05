@@ -135,22 +135,60 @@ C++ provides standard libraries with header files that offer valuable functional
 
 C++ code quality directly impacts readability, maintainability, and efficiency. High-quality code is well-formatted, easy to read, properly tested, and well-documented. It's free of bugs and supports future expansion of the codebase.
 
+To produce quality C++ code, you can follow several best practices and guidelines. Some of the key recommendations I have include:
+
+Follow a coding standard: Maintaining and following a set of standards is important in producing high-quality code. There are several common C++ code standards. Adhering to a coding standard, such as Google's C++ Style Guide or the C++ Core Guidelines, can help maintain consistency and readability in your code
+
+Write readable code: Use proper indentation, whitespace, and comments to make your code easier to read.  This will help with maintainablilty.
+
+Use descriptive and meaningful variable names: This makes your code easier to read and understand.
+
+Write unit tests: Learning and using testing frameworks like GTest and GMock can help ensure the quality of your code. I would suggest using CTest from CMake.  GTest and GMock are from Google.
+
+Use sanitizers and static analysis tools: These tools can help identify and prevent bugs and other issues in your code.
+
+Embrace modern idioms: Familiarize yourself with modern C++ idioms and design patterns to write high-quality code
+
+Utilize the standard library: C++ provides a rich set of standard libraries that can simplify your code and improve performance
+By following these best practices, you can write clean, efficient, and high-quality C++ code.
+
+Use smart pointers: Smart pointers, such as std::unique_ptr and std::shared_ptr, can help manage memory automatically and avoid memory leaks
+
+Always initialize variables: Automatic variables should always be initialized at the point of definition to avoid using uninitialized memory
+
+Check array bounds: Always ensure that you perform bounds checking when working with arrays to prevent buffer overflows and other security issues
+
+Avoid raw pointers: Instead of using raw pointers, prefer smart pointers or other RAII (Resource Acquisition Is Initialization) techniques to manage resources and avoid memory leaks
+
 ## C++ Keywords and Operators
 
 In C++, the keywords "for," "while," "if," "new," "else," "switch," "case," "delete," "continue," "break," "default," and "return" are used for various control flow and memory management purposes.
 
-"for" keyword is used to create a loop that consists of three optional parts: initialization, condition, and increment/decrement.
-"while" keyword is used to create a loop that executes a block of code as long as the specified condition is true.
-"if" keyword is used to execute a block of code if a specified condition is true.
-"new" keyword is used to dynamically allocate memory for a variable of a given type.
-"else" keyword is used to execute a block of code if the same condition is false.
-"switch" keyword is used to select one of many code blocks to be executed.
-"case" keyword is used within a "switch" statement to specify a block of code to be executed.
-"delete" keyword is used to deallocate memory that was previously allocated using "new."
-"continue" keyword is is used to skip the rest of the code inside a loop for the current iteration and continue to the next iteration.
-"break" keyword is used to terminate the loop or switch statement and transfer control to the statement immediately following the loop or switch.
-"default" keyword is used within a "switch" statement to specify the code to be executed if no case matches.
-"return" keyword is used to exit a function and return a value to the caller
+- "for" keyword is used to create a loop that consists of three optional parts: initialization, condition, and increment/decrement.
+
+- "while" keyword is used to create a loop that executes a block of code as long as the specified condition is true.
+
+- "if" keyword is used to execute a block of code if a specified condition is true.
+
+- "new" keyword is used to dynamically allocate memory for a variable of a given type.
+
+- "else" keyword is used to execute a block of code if the same condition is false.
+
+- "switch" keyword is used to select one of many code blocks to be executed.
+
+- "case" keyword is used within a "switch" statement to specify a block of code to be executed.
+
+- "delete" keyword is used to deallocate memory that was previously allocated using "new."
+
+- "continue" keyword is is used to skip the rest of the code inside a loop for the current iteration and continue to the next iteration.
+
+- "break" keyword is used to terminate the loop or switch statement and transfer control to the statement immediately following the loop or      switch.
+
+- "default" keyword is used within a "switch" statement to specify the code to be executed if no case matches.
+
+- "return" keyword is used to exit a function and return a value to the caller.
+
+Notes:
 
 1. 'switch`,`case`,`break` and `default` are typically used together.
 2. `while` sets up a loop condition.
@@ -214,12 +252,32 @@ In C++, "void" is used to indicate that a function doesn't return a value or tha
 
 It is also used to declare universal pointers that can point to any type of data. The void data type has no values and no operations, representing the lack of a data type. When used as a pointer, "void" specifies that the pointer is "universal" and can point to any variable that's not declared with the const or volatile keyword. A void pointer can hold the address of any type and can be typecasted to any type.
 
-Example void:
+In C++, void is used in different contexts. When used as a function return type, it specifies that the function does not return a value. When used for a function's parameter list, it specifies that the function takes no parameters. When used in the declaration of a pointer, void specifies that the pointer is "universal," and a void* pointer can point to any variable. Here's an example of a void function:
 
 ```cpp
+#include <iostream>
 
+// A void function that doesn't return anything
+void sayHello() {
+    std::cout << "Hello, World!" << std::endl;
+}
 
+int main() {
+    // Call the void function
+    sayHello();
+    return 0;
+}
 ```
+
+This example defines a void function sayHello that simply prints "Hello, World!" when called from the main function. This demonstrates the use of void as a function return type.
+
+A void function is one that does not return a value, while a non-void function returns a value. The void keyword is used in a function's parameter list to specify that the function takes no parameters. It is also used in the declaration of a pointer to create a "universal" pointer, void*, which can point to any variable. Here are some common use cases for void pointers in C++:
+
+- Memory allocation: Void pointers are often used in memory allocation functions like malloc and calloc to allocate memory of any data type.
+
+- Callback functions: Void pointers are used to pass a reference to any type of data to a callback function.
+
+- Generic data structures: Void pointers are used to create generic data structures that can store any type of data.
 
 ## C++ enum
 
@@ -271,3 +329,88 @@ Each C++ source file needs to be compiled into an object file, and the resulting
 Additionally, C++ also uses shared libraries (.so files in Unix-based systems, .dll files in Windows) and static libraries (.a files in Unix-based systems, .lib files in Windows) for modularizing code and reusing it across different programs.
 
 In C or C++, .o files are object files that are created when a non-header file is compiled. They contain binary code that is "almost" executable. These files are the output of the compiler and input to the linker/librarian. On the other hand, .so files are shared object files that are created when you want to share code between different executables. They are essentially shared libraries and are used for dynamic linking. In C or C++, both .o and .so files exist. The .o files are used during the construction of the executable, while the .so files are used for dynamic linking and sharing code between different executables
+
+Compiling C++ code involves converting each source file into an object file, and then linking the object files together to create an executable. Here's a summary of the process:
+
+Compilation: Each C++ source file is compiled into an object file. This involves several stages, including preprocessing, compiling, and assembling. The result is a collection of object files, one for each source file.
+
+Linking: The linker takes the object files and combines them into a single executable. It resolves references between the files, links in any necessary libraries, and produces the final output.
+
+Here are some key points to note:
+
+C++ source code is split into header and source files and each part is seen by the compiler in a different way, which affects the compilation and linking process
+
+The compilation process involves preprocessing, which deals with directives like #include, and the result is a pure C++ program file
+
+The linker's job is to link together the object files into a binary executable.
+
+For example, to compile a C++ program consisting of multiple source files, you would first compile each source file into an object file, and then link the object files together to create the executable. Here's a simple illustration of the commands involved:
+
+ ```bash
+  g++ -c file1.cpp
+  g++ -c file2.cpp
+  g++ -o myprog.exe file1.o file2.o
+ ```
+
+This sequence compiles each source file into an object file and then links the object files together to produce the executable myprog.exe
+
+There are two methods for liking. Static linking and dynamic linking are the two methods used to combine external libraries with a C++ program.
+
+Here are the key differences between the two:
+
+Static Linking:
+
+In static linking, all the necessary library code is copied into the final executable file during the compilation process
+
+This results in a larger executable file, but it allows the program to run independently without relying on external libraries at runtime
+
+Static linking offers faster execution because the entire library content is copied at compile time, and there is no need to query for unresolved symbols at runtime
+
+Dynamic Linking:
+    In dynamic linking, the names of the external libraries are copied into the final executable as unresolved symbols. The actual linking of these unresolved symbols occurs at runtime.
+    This leads to smaller executable files, as the code of linked libraries does not need to be shipped with the executable file.
+    Dynamic linking allows for easier updating and deployment, as the external libraries can be updated and recompiled to offer the latest changes to the programs
+
+## Compiler flags are useful
+
+There are a number of useful compiler flags and options to set when compiling C++. Here are some of them:
+
+-Wall, -Werror, -Wextra, -Wpedantic and -pedantic are compiler flags.
+
+There is also -O which enables compiler optimimization and -g which enables debugging symbols.
+
+-march, -mtune and -mcpu and also -melf_i386 sets the architecture.
+
+-m32 sets 32 bit but does not work in g++, it only works in gcc.  I have never tested it out in g++ or c++, or cc.
+
+Valid values for the -march flag in GCC depend on the target architecture. For example, for x86-based systems, valid values include i386, i486, i586, i686, and x86-64.
+
+## The linking process
+
+The linker is a crucial part of the C++ compilation process, responsible for creating executable files by resolving linkage issues and combining object files. There are several linkers typically used in C++, including:
+
+- GNU Linker (ld): This is the default linker for most C and C++ programs on Linux and other Unix-like systems. It is typically invoked indirectly by the compiler driver (e.g., gcc or g++).
+
+- Microsoft Visual C++ Linker (link): This is the linker used with the Microsoft Visual C++ compiler on Windows. It takes object files and libraries as input and produces an executable or a DLL.
+
+- Intel C++ Compiler Linker (xild): This is the linker used with the Intel C++ Compiler. It performs a similar function to other linkers, combining object files into an executable.
+
+These linkers perform the essential task of combining object files and libraries to produce the final executable or library. They also handle tasks such as resolving external symbols, including debugging information, and supporting features like incremental linking and versioning
+
+## Mistakes and common things to avoid doing in C++
+
+Here are some common mistakes to avoid when writing C++ code:
+
+- Incorrect use of "new" and "delete": Improper use of dynamic memory allocation and deallocation can lead to memory leaks and other issues
+
+- Not understanding STL: Lack of understanding of the Standard Template Library (STL) can lead to errors, especially regarding iterator invalidation and thread safety
+
+- Manual memory management: Manual memory management can result in memory leaks, dangling pointers, and other memory-related issues
+
+- Not writing readable, maintainable code: Failing to use proper indentation, meaningful variable names, and comments can make the code difficult to understand and maintain
+
+Ignoring best practices: Not following best practices such as writing unit tests, using static analysis tools, and embracing modern idioms can lead to lower quality code can quickly lead to technical debt you may not be able to escape from.
+
+By being aware of these common mistakes and following best practices, you can write cleaner and more reliable C++ code.
+
+## Overflows, overflows, overflows

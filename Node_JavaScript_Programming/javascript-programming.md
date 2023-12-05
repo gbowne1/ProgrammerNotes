@@ -6,32 +6,33 @@ JavaScript is a versatile and widely-used programming language that is essential
 
 JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification. It is known for its flexibility and is primarily used to enhance the interactivity of web pages. JavaScript can be used on both the client-side and server-side of web development. The filename extension is `.js`.
 
+One should be using the latest version of the ES standard for JavaScript, however there are 3 more common ones used in most projects and they are:
+ES5, ES6 and ES7.
+
 ## ES5, ES6, and ES7
 
 ECMAScript 5 (ES5) was the fifth edition of the ECMAScript standard, which JavaScript is based on. It introduced many new features and improvements to the language. ES6, also known as ECMAScript 2015, brought significant enhancements to JavaScript, including arrow functions, classes, and template literals. ES7, or ECMAScript 2016, and subsequent versions continued to add new features and improvements to the language
 
 The differences between ES5, ES6, and ES7 in JavaScript can be summarized as follows:
-ES5:
 
-    Introduction: Also known as ECMAScript 2009, released in 2009.
+ES5, Also known as ECMAScript 2009, released in 2009.
+
     Variables: Only one way to define variables using the var keyword.
     Performance: Lower performance compared to ES6.
     Object Manipulation: Time-consuming compared to ES6.
     Function Definition: Both function and return keywords are used to define a function.
     Support: Supports primitive data types such as string, number, boolean, null, and undefined.
 
-ES6:
+ES6, Also known as ECMAScript 2015, released in 2015.
 
-    Introduction: Also known as ECMAScript 2015, released in 2015.
     Variables: Introduces two new ways to define variables: let and const.
     Performance: Higher performance than ES5.
     Object Manipulation: Less time-consuming compared to ES5.
     Function Definition: Introduces arrow functions, eliminating the need for the function keyword in some cases.
     Data Types: Adds a new primitive data type, symbol, for supporting unique values.
 
-ES7:
+ES7, Also known as ECMAScript 2016.
 
-    Introduction: Also known as ECMAScript 2016.
     Features: Builds upon ES6 and introduces new features such as async/await, exponentiation operator, and more.
     Transpilation: Requires transpilation to convert ES7 code to ES5 for compatibility with browsers.
     Spread Operator: Introduces the spread operator (...) for merging arrays and objects.
@@ -97,6 +98,95 @@ These names are commonly used, but the choice is ultimately up to the developer.
 Google JavaScript Style Guide, file names for JavaScript must be all lowercase and may include
 underscores or dashes, but no additional punctuation, and the filename extension must be .js.
 
-Some JavaScript frameworks will require certain entrypoint filenames.
+Some JavaScript frameworks will require certain entrypoint filenames.  This is also common in
+JavaScript frameworks, especially NodeJS and React.
 
-## 
+## Filenames and Variale casing
+
+What are the various filename case are used in javascript?
+
+Well, in JavaScript, the common naming conventions for file names are all lowercase with the option to use underscores (_) or dashes (-)
+
+This means that file names must be all lowercase and may include underscores or dashes, but no additional punctuation. For example, "my_file_name.js" or "my-file-name.js" are both valid file names in JavaScript. It is important to follow the convention that your project uses
+
+There is no official, universal convention for naming JavaScript files, but it is crucial to be consistent in the convention you choose.
+
+In JavaScript, there are several naming conventions used for variables, functions, classes, and file names. The two most common naming conventions for file names are PascalCase and kebab-case. PascalCase uses capital letters at the beginning of each word, without spaces or punctuation, while kebab-case uses all lowercase letters and hyphens between words. For example, "MyFile.js" is in PascalCase, and "my-file.js" is in kebab-case
+
+For variables and functions, the most common convention is camelCase, which uses a lowercase letter at the beginning of the name and capital letters for each new word, without spaces or punctuation. For example, "myVariable" and "myFunction" are in camelCase.
+
+It is important to be consistent and follow the convention that your project uses. It is also a good practice to use descriptive and meaningful names for variables, functions, classes, and files to improve code readability and maintainability
+
+## Functions and Classes
+
+Here are examples of JavaScript functions and classes in ES5, ES6, and ES7:
+
+    ES5
+
+    ```js
+    // Function in ES5
+    var myFunction = function() {
+    // function body
+    };
+
+    // Class in ES5 (using constructor function)
+    function MyClass() {
+    this.property = value;
+    this.method = function() {
+    // method body
+    };
+    }
+    ```
+
+    ES6
+
+    ```js
+    // Function in ES6 (using arrow function)
+    const myFunction = () => {
+    // function body
+    };
+
+    // Class in ES6
+    class MyClass {
+    constructor() {
+       this.property = value;
+    }
+    method() {
+        // method body
+    }
+    }
+    ```
+
+    ES7
+
+    ```js
+    // Function in ES7 (using async/await)
+    const myFunction = async () => {
+    // function body
+    };
+
+    // Class in ES7 (using class properties)
+    class MyClass {
+    property = value;
+    method = () => {
+        // method body
+    };
+    }
+    ```
+
+ A function in JavaScript is a block of reusable code designed to perform a specific task. It is similar to a procedure and can take input and return an output. Functions are first-class objects in JavaScript, which means they can be passed to other functions, returned from functions, and assigned to variables and properties. There are several ways to define a function in JavaScript, including function declaration and function expression. JavaScript also has special syntaxes for defining arrow functions and methods. Functions can be invoked when an event occurs, called from JavaScript code, or automatically invoked. When a function reaches a return statement, it stops executing and returns a value. Functions are essential for writing concise, modular, reusable, and maintainable code in JavaScript
+
+## JavaScript classes
+
+ Classes in JavaScript are a way to create objects using a template. They were introduced in ECMAScript 2015 (ES6) to provide a cleaner way to follow object-oriented programming patterns. JavaScript is a prototype-based language, and classes are built on prototypes but also have some syntax and semantics that are unique to classes. Here are some key points about classes in JavaScript:
+
+    Definition: Classes are defined using the class keyword, and they can be defined in two ways: a class expression or a class declaration.
+
+    Constructor: The constructor method is a special method that is executed automatically when a new object is created from a class. It is used to initialize object properties.
+
+    Methods: Class methods are created with the same syntax as object methods. They are defined within the class and can be called on objects created from the class.
+
+    Static Methods and Fields: Classes can also have static methods and static fields, which are shared by all instances of the class.
+    Private Properties: Private fields can be used to define private properties within a class, which are not accessible from outside the class.
+
+Classes in JavaScript provide a more structured way to create and work with objects, and they are especially useful for implementing object-oriented programming concepts

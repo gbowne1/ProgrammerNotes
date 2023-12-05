@@ -79,3 +79,19 @@ There are a number of these keys and properties that should be used in all or mo
 The "version" field in the package.json file must be in the form x.x.x and follow the semantic versioning guidelines
 
 "main": This the entry point filename for your program, library or application, usually app.js, index.js
+
+"license": This should contain the license you are using.
+
+"devDependencies": This section should only include any packages and their version numbers which are needed for development.
+
+"dependencies": This section should include all of the packages required for your application to run, not including development packages.
+
+"engines": This should be the nodejs version(s) required for your application to run.
+
+"description": You should provide a very short description of your package or application here, especially if you are publishing to npmjs, pnpm, yarn.
+
+"private": You should set this to true, unless you intend on publishing your package to npmjs.
+
+## Package Versioning
+
+In "dependencies" and "devDependencies" the version numbers should be listed in SemVer.

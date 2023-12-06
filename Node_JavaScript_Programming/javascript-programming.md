@@ -189,4 +189,64 @@ Here are examples of JavaScript functions and classes in ES5, ES6, and ES7:
     Static Methods and Fields: Classes can also have static methods and static fields, which are shared by all instances of the class.
     Private Properties: Private fields can be used to define private properties within a class, which are not accessible from outside the class.
 
-Classes in JavaScript provide a more structured way to create and work with objects, and they are especially useful for implementing object-oriented programming concepts
+Classes in JavaScript provide a more structured way to create and work with objects, and they are especially useful for implementing object-oriented programming concepts.
+
+To use JavaScript classes, you can follow these steps:
+
+Declaring a Class: Use the class keyword followed by the class name. Always add a constructor() method, which is used to initialize object properties.
+
+Adding Methods: You can add any number of methods to the class using the same syntax as object methods.
+
+Creating Objects: Once you have a class, you can use it to create objects by using the new keyword followed by the class name and any necessary arguments for the constructor.
+
+Here's an example of a simple class in JavaScript:
+
+```js
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age() {
+    const date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
+
+const myCar = new Car("Ford", 2014);
+console.log(myCar.age());
+```
+
+Classes in JavaScript were introduced in ECMAScript 2015 (ES6) to provide a cleaner way to follow object-oriented programming patterns. They are mainly an abstraction over the existing prototypical inheritance mechanism, and all patterns are convertible to prototype-based inheritance
+
+It is widely accepted to use classes in JavaScript, and they are not deprecated
+
+## Tabs, spaces, brackets, semicolons: JavaScript formatting
+
+Usage of tabs and spaces in Javascript is talked about a lot.
+
+## Linting JavaScript
+
+The most common linter used for JavaScript is ESLint. A linter will help you keep your JavaScript code at least partially consistent.  Configuring the linter is beyond the scope of this text.
+
+Linting JavaScript and TypeScript applications offers several benefits, including:
+
+- Fewer Errors: Linters help identify and fix potential issues, such as code smells, before they manifest as critical problems in a production environment.
+
+- Consistent and Readable Code: Linting encourages adherence to coding standards and best practices, leading to more maintainable and consistent code
+
+- Early Error Detection: Linters catch errors early in the development process, making them easier and less costly to fix
+
+- Promotion of Best Practices: They promote the use of coding standards and best practices within a development team, ensuring that the codebase is of high quality and follows established guidelines
+
+- Identifying Security Vulnerabilities: Linting can help identify potential security vulnerabilities in the code, reducing the risk of a breach
+
+While it may seem that the applications you are working on function without any problems despite the linting errors, using a linter is still recommended due to the aforementioned benefits. It not only helps in maintaining code quality but also fosters a culture of best practices and consistency.
+
+## Inline scripting
+
+You can do JavaScript inline in a HTML file by using the `<script>` tag and it needs a closing `</script>` tag to be valid at the end of the script.
+
+You can place this script tag at any point in the HTML, however, for some performance gains the script tag should be placed at the end of the html file, just before the closing `</body>` tag.
+
+Other than this, it is a lot more maintainable to just include the JavaScript code in a separate file, with the extension `.js` and call it from the HTML file.

@@ -27,4 +27,4 @@ Then go to the individual page for the extension you want to recommend and copyi
 
 The format for the extension name is owner.package and usually is listed in between double quotes.  For more than one, use a , after each extension.
 
-If a user is using GitHub and VSCode, they will get a message from the taskbar saying they have extension recommendations
+If a user is using GitHub and VSCode, they will get a message from the taskbar saying they have extension recommendations when they open the cloned/forked project in VSCode.  From there they can opt out of installing new extensions.

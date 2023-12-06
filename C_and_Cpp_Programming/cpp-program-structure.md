@@ -93,4 +93,5 @@ This will help you or anyone else working with your project maintain your projec
 
 If you are working with someone elses C++ project, do your best to try and follow the code style they have used. It is usually reasonably easy to spot how the project is laid out.
 
-If you are developing a C++ program that will be compiled to run on different platforms like O
+If you are developing a C++ program that will be compiled to run on different platforms like Windows and Linux and Mac.
+

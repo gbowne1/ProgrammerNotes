@@ -414,3 +414,23 @@ Ignoring best practices: Not following best practices such as writing unit tests
 By being aware of these common mistakes and following best practices, you can write cleaner and more reliable C++ code.
 
 ## Overflows, overflows, overflows
+
+In C++, an overflow occurs when a number exceeds the maximum value that the data type can hold. This can lead to unexpected behavior and errors in the program. For signed integers, overflow is undefined behavior, while for unsigned integers, it is well-defined and the value wraps around. One way to avoid integer overflows is to use larger data types, such as long long or int64_t, to accommodate larger values. Another approach is to write adequate unit tests to check for overflows and to avoid putting the code in a situation prone to overflows. Using 64-bit integers can also help prevent overflows. However, detecting and preventing overflows can be challenging, and integer overflow bugs in C and C++ programs are difficult to track down and may lead to fatal errors or exploitable vulnerabilities.
+
+## Debugging C++
+
+Debugging in C++ is a critical skill for identifying and fixing errors in code. There are several tools and techniques available
+for debugging C++ code
+
+Here are some tips and techniques for debugging C++ code:
+
+GDB:
+
+GDB is a command-line debugger for C and C++ programs. It allows you to run your program and stop it at any line, examine the contents of variables, and track down program crashes. To use GDB, you need to compile your program with the debug flag, which tells the compiler to insert debugging information the debugger will use.
+
+Tips for Debugging C++:
+
+ Use conditional breakpoints to suspend code execution when specific conditions are met.
+ Use watchpoints to stop the program when a particular variable is modified.
+ Pretty-print structures to make complex data structures easier to read.
+ Time travel debugging allows you to step backward and forward in your program's execution to understand how a bug occurred.

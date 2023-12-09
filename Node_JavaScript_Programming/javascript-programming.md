@@ -121,9 +121,8 @@ It is important to be consistent and follow the convention that your project use
 
 Here are examples of JavaScript functions and classes in ES5, ES6, and ES7:
 
-    ES5
+ES5
 
-    ```js
     // Function in ES5
     var myFunction = function() {
     // function body
@@ -131,16 +130,14 @@ Here are examples of JavaScript functions and classes in ES5, ES6, and ES7:
 
     // Class in ES5 (using constructor function)
     function MyClass() {
-    this.property = value;
-    this.method = function() {
+      this.property = value;
+      this.method = function() {
     // method body
-    };
+     };
     }
-    ```
 
-    ES6
+ES6
 
-    ```js
     // Function in ES6 (using arrow function)
     const myFunction = () => {
     // function body
@@ -148,18 +145,16 @@ Here are examples of JavaScript functions and classes in ES5, ES6, and ES7:
 
     // Class in ES6
     class MyClass {
-    constructor() {
-       this.property = value;
+        constructor() {
+        this.property = value;
     }
     method() {
-        // method body
+    // method body
+      }
     }
-    }
-    ```
 
-    ES7
+ES7
 
-    ```js
     // Function in ES7 (using async/await)
     const myFunction = async () => {
     // function body
@@ -167,14 +162,13 @@ Here are examples of JavaScript functions and classes in ES5, ES6, and ES7:
 
     // Class in ES7 (using class properties)
     class MyClass {
-    property = value;
+        property = value;
     method = () => {
-        // method body
-    };
+    // method body
+      };
     }
-    ```
 
- A function in JavaScript is a block of reusable code designed to perform a specific task. It is similar to a procedure and can take input and return an output. Functions are first-class objects in JavaScript, which means they can be passed to other functions, returned from functions, and assigned to variables and properties. There are several ways to define a function in JavaScript, including function declaration and function expression. JavaScript also has special syntaxes for defining arrow functions and methods. Functions can be invoked when an event occurs, called from JavaScript code, or automatically invoked. When a function reaches a return statement, it stops executing and returns a value. Functions are essential for writing concise, modular, reusable, and maintainable code in JavaScript
+A function in JavaScript is a block of reusable code designed to perform a specific task. It is similar to a procedure and can take input and return an output. Functions are first-class objects in JavaScript, which means they can be passed to other functions, returned from functions, and assigned to variables and properties. There are several ways to define a function in JavaScript, including function declaration and function expression. JavaScript also has special syntaxes for defining arrow functions and methods. Functions can be invoked when an event occurs, called from JavaScript code, or automatically invoked. When a function reaches a return statement, it stops executing and returns a value. Functions are essential for writing concise, modular, reusable, and maintainable code in JavaScript
 
 ## JavaScript classes
 
@@ -201,21 +195,19 @@ Creating Objects: Once you have a class, you can use it to create objects by usi
 
 Here's an example of a simple class in JavaScript:
 
-```js
-class Car {
-  constructor(name, year) {
-    this.name = name;
-    this.year = year;
-  }
-  age() {
-    const date = new Date();
-    return date.getFullYear() - this.year;
-  }
-}
+    class Car {
+      constructor(name, year) {
+        this.name = name;
+        this.year = year;
+      }
+      age() {
+        const date = new Date();
+        return date.getFullYear() - this.year;
+      }
+    }
 
 const myCar = new Car("Ford", 2014);
 console.log(myCar.age());
-```
 
 Classes in JavaScript were introduced in ECMAScript 2015 (ES6) to provide a cleaner way to follow object-oriented programming patterns. They are mainly an abstraction over the existing prototypical inheritance mechanism, and all patterns are convertible to prototype-based inheritance
 
@@ -224,6 +216,16 @@ It is widely accepted to use classes in JavaScript, and they are not deprecated
 ## Tabs, spaces, brackets, semicolons: JavaScript formatting
 
 Usage of tabs and spaces in Javascript is talked about a lot.
+
+The debate between using tabs and spaces in JavaScript (and other programming languages) has been ongoing for some time. Here are some key points from the search results
+
+Tabs: Tabs are considered by some to be the democratic way to handle white space, as anyone can set them up how they like them. They are also descriptive, telling the editor the amount of indentation that should be added
+
+Spaces: Spaces are displayed visually the same across any system, ensuring consistency. Different platforms and editors may display tabs with varying sizes, leading to potential issues with code alignment and readability
+
+Debate: The debate between tabs and spaces is not just about personal preference, but also about consistency, readability, and potential issues with code alignment and display across different platforms and editors
+
+The choice between tabs and spaces is ultimately a matter of personal or team preference, as both can be used effectively. Consistency within a codebase is key, regardless of whether tabs or spaces are chosen for indentation
 
 ## Linting JavaScript
 
@@ -250,3 +252,37 @@ You can do JavaScript inline in a HTML file by using the `<script>` tag and it n
 You can place this script tag at any point in the HTML, however, for some performance gains the script tag should be placed at the end of the html file, just before the closing `</body>` tag.
 
 Other than this, it is a lot more maintainable to just include the JavaScript code in a separate file, with the extension `.js` and call it from the HTML file.
+
+## Try and Catch
+
+To use try...catch in different versions of JavaScript, you can follow these guidelines:
+
+In ES5, you can use the traditional try...catch syntax to handle exceptions.
+
+ try {
+ // Code that may throw an exception
+ } catch (error) {
+ // Handling the exception
+ }
+
+In ES6 and later versions, the try...catch syntax remains the same. However, new features have been added to the language, but the basic try...catch functionality remains consistent across these versions
+
+For example, in ES2019, optional catch binding was introduced, allowing you to omit the binding if you don't need to use the error object:
+
+ try {
+ // Code that may throw an exception
+ } catch {
+ // Handling the exception
+ }
+
+In summary, the try...catch syntax is consistent across ES5, ES6, and later versions of JavaScript, with some additional features introduced in the later versions
+
+## Debugging JavaScript
+
+The `console.log` statement should be used for debugging in the browser console for JavaScript by sending logged and logged error output to the console.
+
+ESLint is also a good tool to be used for debugging JavaScript.
+
+Chrome has built in DevTools for debugging
+
+Node.js has its own debugger and debugger port for it's JavaScript.

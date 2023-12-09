@@ -302,6 +302,49 @@ In this first example, "season" is the name of the enumeration, and "spring," "s
 
 Enums are used to restrict data to certain values and provide it in a human-readable format. They are vital for any project where you need to work with a fixed set of values, such as game development or managing states of objects
 
+An enum consists of named integral constants. It provides a way to define and group integral constants, making the code easy to maintain and less complex. Enums are generally used when you expect the variable to select one value from a possible set of values, increasing abstraction and enabling you to focus more on values rather than worrying about how to store them. To structure an enum in C++, you can use the following syntax
+
+```cpp
+enum EnumName {
+    EnumValue1,
+    EnumValue2,
+    //...
+};
+```
+
+For example:
+
+```cpp
+enum Color {
+    Red,
+    Green,
+    Blue
+};
+```
+
+This defines an enum type called "Color" with the values "Red", "Green", and "Blue"
+
+Additionally, C++ 11 introduces enum class (or enum struct) to address some limitations of the traditional enum. Enum class (or enum struct) provides type safety, scope, and the ability to specify the underlying type. Here's an example of how to define an enum class
+
+```cpp
+enum class EnumName : underlyingType {
+    EnumValue1,
+    EnumValue2,
+    //...
+};
+```
+
+For example:
+
+```cpp
+enum class Status : char {
+    Active,
+    Inactive
+};
+```
+
+This defines an enum class type called "Status" with the values "Active" and "Inactive", and the underlying type is specified as "char".
+
 ## Compiled C++ code
 
 In C++, when you compile a source file, it is converted into an object file. The object files resulting from the compilation of multiple source files are then linked into an executable, a shared library, or a static library. Here are the differences between the common compiled object files in C++:
@@ -367,6 +410,7 @@ This results in a larger executable file, but it allows the program to run indep
 Static linking offers faster execution because the entire library content is copied at compile time, and there is no need to query for unresolved symbols at runtime
 
 Dynamic Linking:
+
     In dynamic linking, the names of the external libraries are copied into the final executable as unresolved symbols. The actual linking of these unresolved symbols occurs at runtime.
     This leads to smaller executable files, as the code of linked libraries does not need to be shipped with the executable file.
     Dynamic linking allows for easier updating and deployment, as the external libraries can be updated and recompiled to offer the latest changes to the programs
@@ -433,4 +477,4 @@ Tips for Debugging C++:
  Use conditional breakpoints to suspend code execution when specific conditions are met.
  Use watchpoints to stop the program when a particular variable is modified.
  Pretty-print structures to make complex data structures easier to read.
- Time travel debugging allows you to step backward and forward in your program's execution to understand how a bug occurred.
+ Time travel debugging allows you to step backward and forward in your program's execution to understand how a bug occurred

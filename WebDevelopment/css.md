@@ -114,7 +114,6 @@ CSS rules should not be empty and your editor or IDE might even warn you about t
 body {
    /* Not a great idea to leave this part empty */
 };
-
 ```
 
 ## CSS Variables
@@ -137,6 +136,24 @@ In this example, --primary-color is the variable name, and blue is the value. Th
 
 CSS variables provide a more efficient way to write and manage CSS code, making it easier to maintain and update styles across a project. They are particularly beneficial for larger projects where consistency and maintainability are crucial.
 
+## Other basic CSS stuff you should know if you don't already
+
+The universal selector in CSS is denoted by an asterisk (*) and is used to select all elements on an HTML page. It matches elements of any type and can be used to apply styles globally. Here's a brief overview of how to use the universal selector:
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  /*Add more global styles here*/
+}
+```
+
+The universal selector selects all elements and can also be used to select all elements inside another element. It is a powerful tool for applying styles globally, but it's important to use it judiciously as it can affect the performance of the page if overused.
+
+This section should only get CSS rule applied to it that will be the same across the page or pages you intend to style.  
+
+It is valuable tool for applying styles to all elements on a page and can be used to set global styles. However, it should be used carefully to avoid unintended consequences on the page's performance.
+
 ## CSS Media Queries and other important usage of @
 
 In addition to @media and @import, there are other @ rules in CSS that serve different purposes. Some of the commonly used @ rules include:
@@ -150,3 +167,21 @@ In addition to @media and @import, there are other @ rules in CSS that serve dif
 - @page: This rule is used to specify the style of a page when printed. It allows you to set the margins, size, and orientation of the printed page.
 
 These @ rules provide additional functionality and flexibility to CSS, allowing you to define custom fonts, create animations, apply styles conditionally, and specify the style of printed pages
+
+## Advanced CSS
+
+To use the :root pseudo-class in CSS, you can define global CSS variables and apply styles to the root element of the document. Here's a brief overview of how to use it:
+
+```css
+:root {
+  --main-color: hotpink;
+  --pane-padding: 5px 42px;
+  /* Add more global variables and styles here */
+}
+```
+
+The :root pseudo-class matches the root element of a document, which is typically the `<html>` element in HTML. It is similar to the html selector but has higher specificity, making it useful for declaring global CSS variables that can be accessed throughout the document
+
+One practical benefit of using :root is that it allows you to declare global CSS variables that are accessible throughout the HTML code. Additionally, variables set in :root can be used to style SVG graphics, which is not possible with the html selector
+
+It is a useful tool for defining global CSS variables and applying styles to the root element of a document, providing a convenient way to manage styles across a project.

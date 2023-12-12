@@ -33,43 +33,59 @@ At a minimum, a manifest file should contain the following manifest members: "na
 
 An example manifest.json,
 
-```json
- {
- "name": "My Web App",
- "displayName": "My Web App",
- "background_color": "#ffffff",
- "dir": "ltr",
- "display": "standalone",
- "icons": [
-  {
-  "src": "icon-192.png",
-  "sizes": "192x192",
-  "type": "image/png"
-  },
-  {
-  "src": "icon-512.png",
-  "sizes": "512x512",
-  "type": "image/png"
-  }
- ],
- "lang": "en-US",
- "orientation": "portrait",
- "start_url": "/",
- "id": "com.example.mywebapp",
- "scope": "/",
- "manifest_version": 2,
- "type": "web_app",
- "meta": {
-  "author": "John Doe",
-  "description": "A simple web app",
-  "version": "1.0.0"
- },
- "dependencies": {
-  "react": "^17.0.2",
-  "react-dom": "^17.0.2"
- },
- "defaultWidth": 800,
- "defaultHeight": 600,
- "resizeX": true
- }
-```
+    ```json
+     {
+     "name": "My Web App",
+     "displayName": "My Web App",
+     "background_color": "#ffffff",
+     "dir": "ltr",
+     "display": "standalone",
+     "icons": [
+      {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+      },
+      {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+      }
+      ],
+     "lang": "en-US",
+     "orientation": "portrait",
+     "start_url": "/",
+     "id": "com.example.mywebapp",
+     "scope": "/",
+     "manifest_version": 2,
+     "type": "web_app",
+     "meta": {
+     "author": "John Doe",
+     "description": "A simple web app",
+     "version": "1.0.0"
+     },
+     "dependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    },
+    "defaultWidth": 800,
+    "defaultHeight": 600,
+    "resizeX": true
+    }
+    ```
+
+The manifest.json file is used in web development to define the properties and behavior of web applications and extensions. It is written in JSON (JavaScript Object Notation) format and contains various metadata and configuration settings that help browsers and platforms understand and interact with the application or extension. This file typically includes information such as the application or extension name, version number, description, icons, permissions, and background scripts
+
+The web app manifest is a JSON file that tells the browser about your Progressive Web App and how it should behave when installed on the user's desktop or mobile device
+
+It is also used by certain launchers to create instances for users, acting like a recipe to tell the system which ingredients are to be added when installing a modpack or application
+
+While there are no strictly required properties for a manifest.json file, some common properties include short_name, name, icons, start_url, display, theme_color, and background_color
+
+The file typically includes information such as the application or extension name, version number, description, icons, permissions, and background scripts
+
+The manifest.json file affects web app performance by providing important metadata and configuration settings that help browsers and platforms understand and interact with the application, and by enabling the app to behave like a native app when installed on the user's device, which can improve user engagement and performance
+
+Having a manifest.json file available to browsers on your website or web page, even if it's not an app or a Progressive Web App (PWA), can have an impact on SEO and performance. Search engines consider PWAs and websites with manifest.json files more favorably, which can lead to improved SEO. Additionally, using a manifest.json file can enhance user experience by allowing the website to be installed as a PWA, providing an immersive and engaging experience for users. It can also lead to increased user engagement and improved performance, as PWAs can cache website data and work offline, reducing the need to download data from the server repeatedly
+
+Therefore, while not strictly required for a traditional website, having a manifest.json file can still have positive effects on SEO and user experience

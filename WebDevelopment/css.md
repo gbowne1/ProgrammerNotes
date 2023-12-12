@@ -2,6 +2,30 @@
 
 Yep, you probably heard. CSS is hard. Here are some notes about CSS that might make this not so hard.
 
+CSS files have the extension `.css` and typically these files are named `style.css` or `styles.css`.
+
+You can also use inline CSS in a `.html` file by using the `<style>` tag.
+
+If you create CSS files, they need to be linked to the html by using a `<link>` tag.  This goes inside the `<head>` near the top of the HTML file, otherwise the browser will not know where the CSS is linked to.
+
+The choice between inline CSS and included (external) CSS can impact performance and maintainability. Here are some insights:
+
+    Performance:
+        Inline CSS: Reduces the number of files the browser needs to download before displaying the web page, potentially leading to faster loading. However, inline CSS is not cached, so it may impact performance on subsequent visits.
+        External CSS: Allows the browser to cache the CSS file, leading to improved efficiency on subsequent visits. It also enables parallel downloading of resources, which can enhance performance
+
+    Maintainability:
+        Inline CSS: Adding CSS rules to every HTML element can make the HTML structure messy and affect page size and download time. It's not recommended for managing an entire website's styles.
+        External CSS: Provides a more organized and maintainable way to manage styles, especially for larger projects. It also promotes reusability and easier maintenance.
+
+## Global Styles
+
+Global styles in CSS refer to styles that are applied to the entire document or website, rather than being limited to a specific component or element. They can be achieved in several ways, such as by using the `:root` or `<body>` elements, the unqualified `*` selector, or by creating and importing global CSS files. Global styles are important for creating a consistent and efficient design system, as they allow for the separation of branding/aesthetic from layout, and the treatment of the two as separate concerns.
+
+Typical CSS files used to contain global styles are index.css and app.css (if your page/site is a PWA or App or Web App).
+
+## Special Characters
+
 In CSS, there are special characters:
 
 - ";" is used to separate individual declarations in a style rule.
@@ -150,7 +174,7 @@ The universal selector in CSS is denoted by an asterisk (*) and is used to selec
 
 The universal selector selects all elements and can also be used to select all elements inside another element. It is a powerful tool for applying styles globally, but it's important to use it judiciously as it can affect the performance of the page if overused.
 
-This section should only get CSS rule applied to it that will be the same across the page or pages you intend to style.  
+This section should only get CSS rule applied to it that will be the same across the page or pages you intend to style.
 
 It is valuable tool for applying styles to all elements on a page and can be used to set global styles. However, it should be used carefully to avoid unintended consequences on the page's performance.
 

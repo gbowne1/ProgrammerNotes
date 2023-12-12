@@ -39,3 +39,5 @@ Other components:
 These components can be combined in different ways to form various tech stacks, such as the MEAN stack (MongoDB, Express, Angular, Node.js) or the LAMP stack (Linux, Apache, MySQL, PHP)
 
 The choice of tech stack depends on the specific requirements of the project and the skills of the development team.
+
+In the latest versions of React, and you are using JavaScript with React instead of TypeScript, you should be focused on using at least ES6 or ES2015 so that you have access to `import` and `export`

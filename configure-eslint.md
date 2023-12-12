@@ -29,11 +29,14 @@ Besides the .eslintrc file, ESLint also recognizes the following files as config
 - .eslintrc.yaml or .eslintrc.yml: These are YAML files to define the configuration structure.
 
 - .eslintrc.json: This is a JSON file to define the configuration structure. ESLint’s JSON files also allow JavaScript-style comments.
-  package.json: You can create an eslintConfig property in your package.json file and define your configuration there. If there are multiple configuration files in the same directory, ESLint only uses one.
+
+- package.json: You can create an eslintConfig property in your package.json file and define your configuration there. If there are multiple configuration files in the same directory, ESLint only uses one.
 
 The priority order is as follows: .eslintrc.js, .eslintrc.cjs, .eslintrc.yaml, .eslintrc.yml, .eslintrc.json, package.json
 
 These files provide flexibility in how you can define and manage your ESLint configurations.
+
+As you gain familiarity with ESLint, You should build a baseline configuration and store the rather than just rely on the defaults so that you can get to work easily on your project and store it somewhere handy so that you can copy and paste it into your project.  If you work on various types of JavaScript projects and frameworks, you might even have several configurations you can rely on.
 
 ## Installing ESLint
 

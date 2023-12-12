@@ -1,6 +1,6 @@
 # JSON file structure
 
-JSON file structure can be a bit confisuing
+JSON code structure can be a bit confusing. This is commonly used in API's and is a great way to struture data.
 
 This is a JSON object file:
 

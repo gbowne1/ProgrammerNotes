@@ -355,9 +355,10 @@ To remove elements from an array in JavaScript, you can use the pop(), shift(), 
     Using filter(): It creates a new array with elements that pass the test implemented by the provided function.
 
 Looping Through an Array in JavaScript
+
 You can loop through an array in JavaScript using various methods such as for loop, forEach(), for...of loop, and map() method. Here's a brief overview of each method:
 
-Using for loop:
+Using `for` loop:
 
     ```js
     for (let i = 0; i < array.length; i++) {
@@ -569,3 +570,56 @@ You can also remove duplicates from an array of objects in JavaScript using the 
     ```
 
 This code uses the filter() method in combination with the findIndex() method to create a new array containing only the first occurrence of each unique object. The Set object and the filter() method provide effective ways to remove duplicates from an array of objects in JavaScript, each with its own advantages and considerations
+
+## Using Async and Await
+
+To use async and await in JavaScript, you can follow these steps:
+
+    Declare an Async Function: Use the async keyword before a function to declare it as an async function. This means the function always returns a promise. For example:
+
+    async function myFunction() {
+      return "Hello";
+    }
+
+Use the Await Keyword: Inside an async function, you can use the await keyword before a call to a function that returns a promise. This makes the code wait until the promise is resolved before continuing. For example:
+
+    let result = await myPromise;
+
+Error Handling: You can use try...catch blocks to handle errors when using async and await.
+
+To handle errors when using async and await in JavaScript, you can use the try...catch block. Here's how you can do it:
+
+    async function myFunction() {
+      try {
+        let result = await someAsyncTask();
+        // Code to handle the result
+      } catch (error) {
+        // Code to handle the error
+      }
+    }
+
+This allows you to catch and handle any errors that occur during the execution of the await-ed promise. As for the second part of your question, yes, async and await can be used with promises in JavaScript. The await keyword is used to wait for a promise to resolve, and it can only be used inside an async function. When used together, they provide a more readable and maintainable way to work with promises.
+
+## Other different types of JavaScript files
+
+- `.cjs` file extension
+
+  This is for CommonJS. CommonJS is a project that aims to standardize the module ecosystem for JavaScript outside of web browsers, such as on web servers or native desktop applications. It provides a specification for how modules should work and is widely used for server-side JavaScript with Node.js. CommonJS can be recognized by the use of the require() function and module.exports, while ES modules use import and export statements for similar functionality. The .cjs file extension is associated with CommonJS code, which is intended to allow JavaScript to be used in environments beyond a frontend web browser. It also allows JavaScript to be used in environments beyond a frontend web browser
+  CommonJS is a module system for JavaScript used in server-side environments like Node.js.
+
+- ``.mjs` file extension
+
+  The .mjs file extension is used to indicate that a JavaScript file uses the ECMAScript module format, providing a standardized way to organize and share JavaScript code across multiple files and projects. ES6 modules, which are denoted by the .mjs extension, offer several advantages over traditional .js files, including native support for ES6 modules, a clear distinction between modules and regular scripts, and improved compatibility with bundlers and build tools
+
+  The .mjs file extension is commonly used in Node.js for ECMAScript modules, providing a standardized way to organize and share JavaScript code across multiple files and projects. Some common use cases for .mjs files in Node.js include:
+
+  Native Support for ES6 Modules: The .mjs file extension leverages the native support for ES6 modules in modern JavaScript runtimes, allowing the use of the import and export keywords to define and use modules without the need for additional tools or transpilation
+
+  Clear Distinction Between Modules and Scripts: The use of .mjs file extension helps differentiate between modules and regular scripts, enabling developers to quickly identify and work with modules in their projects
+
+  Improved Compatibility with Bundlers and Build Tools: As the new module system gains popularity, bundlers and build tools have started to adopt native ES6 module support. Using the .mjs file extension ensures better compatibility with these tools, allowing for seamless integration into existing development workflows
+
+- `.ejs` file extension
+
+  EJS, or Embedded JavaScript, is a simple templating language that allows the generation of HTML markup with plain JavaScript. It is commonly used as a template engine in Node.js to create HTML templates with minimal code and to inject data into an HTML template on the client side, producing the final HTML. EJS enables the embedding of JavaScript into HTML pages, and it is often used with Express, a web application framework for Node.js. EJS files typically use the .ejs file extension. To use EJS in a Node.js project, the EJS package can be installed via npm, and the templating engine can be set up with Express. EJS is known for its ease of use, as it allows the direct use of JavaScript to generate the desired HTML output. It also provides features such as partials and the ability to pass variables to views, making it a powerful tool for building web applications
+  

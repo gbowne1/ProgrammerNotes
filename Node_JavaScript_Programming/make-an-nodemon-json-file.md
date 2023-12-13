@@ -20,6 +20,10 @@ worth exploring and experimenting with different options to find the best fit fo
 details, you can refer to the official documentation of nodemon and online resources that compare
 different tools for managing Node.js applications.
 
+Nodemon is a useful tool for developing Node.js applications as it automates the process of stopping
+and starting your application when file changes are detected. It does not require any additional changes
+to your code or method of development
+
 To use nodemon, you need to install it either globally or locally on your project using npm or yarn.
 
 Here is the `nodemon.json` File Structure:
@@ -47,3 +51,4 @@ This is all the information I could find out about the file.
 
 ## Starting Nodemon
 
+Typically you start nodemon by `nodemon yourApp.js`

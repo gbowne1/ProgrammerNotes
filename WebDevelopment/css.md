@@ -8,6 +8,31 @@ You can also use inline CSS in a `.html` file by using the `<style>` tag.
 
 If you create CSS files, they need to be linked to the html by using a `<link>` tag.  This goes inside the `<head>` near the top of the HTML file, otherwise the browser will not know where the CSS is linked to.
 
+This is typically done using the following line
+
+    `<link rel="stylesheet" type="text/css" href="styles.css" />`
+
+The type attribute is not required in HTML5 so you can:
+
+    `<link rel="stylesheet" href="styles.css" />`
+
+Calling the paths to the `.css` file are very important in this tag, as the browser may not be able to find it if you don't have the path correct.
+It may also issue a cors error in the browser console.
+
+CSS stylesheets and .css files can use both relative and absolute paths. A relative path is used to link the CSS file relative to the location of the HTML file. On the other hand, an absolute path is the full URL to the file, specifying the complete location from the root of the website. When using a relative path, the href attribute in the link tag should specify the file path of the CSS file relative to the location of the HTML file. For example, if the CSS file is in a subdirectory, the link would be:
+
+    `<link rel="stylesheet" type="text/css" href="subdirectory/style.css" />`
+
+If the CSS file is in the parent directory of the HTML file, the link would be:
+
+    `<link rel="stylesheet" type="text/css" href="../style.css" />`
+
+On the other hand, absolute paths specify the complete URL to the file, for example:
+
+    `<link rel="stylesheet" type="text/css" href="https://www.example.com/style.css" />`
+
+Using relative paths is generally considered a best practice, as it makes the file paths more flexible and portable, working regardless of the website’s domain or root folder structure
+
 The choice between inline CSS and included (external) CSS can impact performance and maintainability. Here are some insights:
 
     Performance:
@@ -22,7 +47,7 @@ The choice between inline CSS and included (external) CSS can impact performance
 
 Global styles in CSS refer to styles that are applied to the entire document or website, rather than being limited to a specific component or element. They can be achieved in several ways, such as by using the `:root` or `<body>` elements, the unqualified `*` selector, or by creating and importing global CSS files. Global styles are important for creating a consistent and efficient design system, as they allow for the separation of branding/aesthetic from layout, and the treatment of the two as separate concerns.
 
-Typical CSS files used to contain global styles are index.css and app.css (if your page/site is a PWA or App or Web App).
+Typical CSS files that are used to contain global styles are `index.css` and `app.css` (if your page/site is a PWA or App or Web App).
 
 ## Special Characters
 

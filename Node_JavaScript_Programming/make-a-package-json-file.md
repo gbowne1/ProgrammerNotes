@@ -95,3 +95,17 @@ The "version" field in the package.json file must be in the form x.x.x and follo
 ## Package Versioning
 
 In "dependencies" and "devDependencies" the version numbers should be listed in SemVer.
+
+The difference between using ^ and ~ in package versions is that ^ allows non-breaking updates, while ~ allows only for patch updates
+
+It's typically listed in the various dependencies sections of as `"package": "~0.0.0"`.
+
+## Dependencies
+
+In a package.json file, the:
+
+"dependencies": field is used to list the packages that are required for the application to run, while the devDependencies field is used to list the packages that are only required during development.
+
+"peerDependencies" field is used to specify the packages that the current package relies on in order to work
+
+"optionalDependencies" field is used to specify the packages that are not necessary for the application to run, but can be used to provide extra functionality.

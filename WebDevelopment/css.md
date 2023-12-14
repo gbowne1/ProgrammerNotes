@@ -96,11 +96,9 @@ There are various types of selectors in CSS that are used to target HTML element
 
  A CSS type selector, also known as a tag name selector or element selector, matches elements by their node name, selecting all elements of the given type within a document. It is used to style HTML elements based on their tag names. For example, to select all <p> elements and center-align them, you can use the following CSS rule:
 
- ```css
- p {
- text-align: center;
- }
- ```
+    p {
+    text-align: center;
+    }
 
  Type selectors are not case-sensitive, and they can be combined with other selectors to target specific elements. They are one of the simplest and most frequently used selectors in CSS
 
@@ -108,11 +106,9 @@ There are various types of selectors in CSS that are used to target HTML element
 
  For instance, A CSS class selector is used to select HTML elements with a specific class attribute. It is denoted by a period (.) followed by the class name. To use it, you can define a class in your CSS file and then apply that class to HTML elements in your document. For example, to create a class called "highlight" and apply it to certain elements, you can use the following CSS rule:
 
-```css
-.highlight {
-background-color: yellow;
-}
-```
+    .highlight {
+    background-color: yellow;
+    }
 
 And in your HTML document:
 

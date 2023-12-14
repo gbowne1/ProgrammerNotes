@@ -9,6 +9,28 @@ JavaScript, often abbreviated as JS, is a high-level, interpreted programming la
 One should be using the latest version of the ES standard for JavaScript, however there are 3 more common ones used in most projects and they are:
 ES5, ES6 and ES7.
 
+It's also very important to stick to one version of the syntax, unless you are trying to introduce backwards compatibility into your project.
+This will make it maintainable. For instance, If you are going to use ES6 syntax in a JavaScript project, I would suggest sticking with ES6 syntax in each .js file instead of using snippits of, say, ES5, ES6 and ES7 code splattered all over a file you've created.
+
+## JavaScript Standards, References and Styleguides
+
+While not specifically important to being able to program in JavaScript, there are some styleguides issued for instance by Google.
+
+The Google Styleguide is here <https://google.github.io/styleguide/jsguide.html> and is also published in other formats like XML.
+
+The Standards are documented by ECMA International in a few places:
+
+<https://262.ecma-international.org/5.1/>
+<https://tc39.es/ecma262/>
+<https://ecma-international.org/publications-and-standards/standards/ecma-262/>
+<https://tc39.es/ecma262/multipage/>
+
+There are JavaScript reference information at <https://developer.mozilla.org/en-US/docs/Web/JavaScript>.
+
+They have a GitHub page at: <https://github.com/tc39> and <https://github.com/tc39/ecma262>
+
+This post is really old but it has some good stuff in there: <https://stackoverflow.com/questions/912479/what-is-the-difference-between-javascript-and-ecmascript>
+
 ## ES5, ES6, and ES7
 
 ECMAScript 5 (ES5) was the fifth edition of the ECMAScript standard, which JavaScript is based on. It introduced many new features and improvements to the language. ES6, also known as ECMAScript 2015, brought significant enhancements to JavaScript, including arrow functions, classes, and template literals. ES7, or ECMAScript 2016, and subsequent versions continued to add new features and improvements to the language
@@ -42,7 +64,7 @@ ES7, Also known as ECMAScript 2016.
 
 To start learning JavaScript, it's important to understand the basic syntax and concepts of the language. Once you have a good grasp of the fundamentals, you can explore the new features introduced in ES6 and ES7.
 
-These features include:
+These include:
 
 - Arrow functions
 - Classes
@@ -51,46 +73,15 @@ These features include:
 - Spread and rest operators
 - Destructuring assignments
 - Promises
+- Modules
+- Operators
+- Control Flow
+- Arrays
+- Functions
+- Objects
+- Prototypes
 
-By understanding these features, you can write more efficient and modern JavaScript code.
-
-In conclusion, JavaScript is a powerful language that continues to evolve with new features and improvements. Whether you are new to programming or have some experience, learning JavaScript and its latest versions, ES6 and ES7, will open up a world of possibilities for web development.
-
-Here are 12 concepts to learn in ES5, ES6, and ES7 JavaScript programming:
-
-Fundamentals: Understanding the basic syntax, data types, and control structures in JavaScript.
-
-- Operators: Learning about arithmetic, comparison, logical, and other operators used in JavaScript.
-
-- Control Flow: Understanding conditional statements (if, else, switch) and loops (for, while) to control the flow of a program.
-
-- Arrays: Exploring array manipulation, iteration, and new methods introduced in ES6 and ES7.
-
-- Functions: Mastering the concept of functions, including arrow functions introduced in ES6.
-
-Arrow Functions only exist in ES6 and ES7 Javascript.
-
-Here is an example of an arrow function:
-
-    ```js
-    var multiply = (x, y) => x * y;
-    ```
-
-- Objects: Understanding object-oriented programming in JavaScript, including object creation, manipulation, and ES6 class syntax.
-
-- Prototypes: Learning about prototypes and inheritance in JavaScript, a fundamental concept in ES5 and ES6.
-
-- Patterns to Create Objects: Exploring different patterns for creating objects, including factory functions and constructor functions.
-
-- Error Handling: Understanding error handling techniques, including try-catch blocks and error objects.
-
-- Promises: Learning about asynchronous programming and handling asynchronous operations using promises, introduced in ES6.
-
-- Template Literals: Exploring the new syntax for creating strings and performing string interpolation introduced in ES6.
-
-- Modules: Understanding the concept of modules for organizing and importing/exporting code, a feature introduced in ES6 for improved modularity and reusability.
-
-## Javascript program / application entrypoint
+## JavaScript program / application entrypoint
 
 The typical filenames for JavaScript program entry points are "index.js," "app.js," and "main.js".
 
@@ -100,6 +91,39 @@ underscores or dashes, but no additional punctuation, and the filename extension
 
 Some JavaScript frameworks will require certain entrypoint filenames.  This is also common in
 JavaScript frameworks, especially NodeJS and React.
+
+## JavaScript file structure
+
+The first few lines of a .js file, usually are a few lines of comment basically documenting in short
+form what the file is, who created it, possibly a timestamp, filename and any other useful metadata
+
+If you're going to use the `use strict` it will go next.  If you haven't used any comments above the 'use strict`
+it can go as the first line of code. We will discuss `use strict` later on in this document.
+
+This is my understanding of the order of how things are implemented in the `.js` files you create. In this top down
+order:
+
+1. Import statements
+2. Variable declarations
+3. Function declarations
+4. Event listeners or other callbacks
+5. Execution code
+
+## Commenting your JavaScript Code
+
+There are a couple different types of comments used in JavaScript
+
+- `//` is a single line comment
+
+- `/*  Comment */` is a multi line comment and can be spread over a few lines.
+
+It's a great idea to comment the top of your file as well as the code you've written.  Code should be self-documenting which at least
+for beginners may be not as easy as it seems.  It should usually be apparent to anyone reading your code, regaurdless of experience,
+what your JavaScript code is doing.
+
+There are things to help you out however, including JSDoc.
+
+JSDoc is a markup language used to annotate JavaScript source code files. Programmers use comments containing JSDoc to add documentation describing the application programming interface of the code they're creating. This documentation is then processed by various tools to produce accessible formats like HTML and Rich Text Format. JSDoc's syntax and semantics are similar to those of the Javadoc scheme, which is used for documenting code written in Java. It is an open format and is widely used in the JavaScript community for documenting code and providing type information
 
 ## Filenames and Variable casing
 
@@ -116,6 +140,22 @@ In JavaScript, there are several naming conventions used for variables, function
 For variables and functions, the most common convention is camelCase, which uses a lowercase letter at the beginning of the name and capital letters for each new word, without spaces or punctuation. For example, "myVariable" and "myFunction" are in camelCase.
 
 It is important to be consistent and follow the convention that your project uses. It is also a good practice to use descriptive and meaningful names for variables, functions, classes, and files to improve code readability and maintainability
+
+## A newer class and standard of JavaScript to note
+
+There are a few revisions to the JavaScript standard post ES7.  To this writer, they are still not as common as ES5, ES6 and ES7.
+
+ES2017 (ES8): Introduced string padding, Object.values/Object.entries, async functions, and shared memory
+
+ES2018 (ES9): Added rest/spread properties, asynchronous iteration, Promise.finally(), and additions to RegExp
+
+ES2019 (ES10): Included features like Array.prototype.flat(), Object.fromEntries, String.prototype.trimStart/trimEnd, and optional catch binding
+
+ES2020 (ES11): Introduced the Nullish Coalescing Operator (??) and the Optional Chaining Operator (?.)
+
+ES2021 (ES12): Added features like String.prototype.replaceAll, Promise.any, Logical Assignment Operators, and more.
+
+ES2022 (ES13): This version introduced features such as class fields, import(), and extended numeric separators
 
 ## Functions and Classes
 
@@ -226,6 +266,20 @@ Debate: The debate between tabs and spaces is not just about personal preference
 
 The choice between tabs and spaces is ultimately a matter of personal or team preference, as both can be used effectively. Consistency within a codebase is key, regardless of whether tabs or spaces are chosen for indentation
 
+In JavaScript, particularly in ES5, ES6, and ES7, developers have the option to use tabs or spaces for indenting. The choice between tabs and spaces is a matter of personal preference and team conventions. Here are the options you can use:
+
+    Tabs for indentation, spaces for alignment: This approach is considered flexible and allows for proper alignment. It involves using tabs for the indentation of code blocks and spaces for aligning elements within the code. This method is seen as a superior approach by some developers
+
+    Spaces for both indentation and alignment: While using spaces for both indentation and alignment is acceptable, some developers find it less flexible compared to the tabs for indentation, spaces for alignment approach
+
+    Tabs for both indentation and alignment: This approach is generally considered unacceptable as it can lead to issues and is not recommended
+
+The choice between tabs and spaces is often influenced by the coding style guide of the organization or the project. For example, some style guides recommend two spaces for indentation, while others recommend using tabs or four spaces
+
+It's important to maintain consistency within a codebase, and tools like ESLint can be used to enforce consistent indentation
+
+Ultimately, the decision of whether to use tabs or spaces for indenting in JavaScript code should be based on the specific needs and conventions of the project or team.
+
 ## Linting JavaScript
 
 The most common linter used for JavaScript is ESLint. A linter will help you keep your JavaScript code at least partially consistent.  Configuring the linter is beyond the scope of this text.
@@ -300,37 +354,37 @@ Node.js has its own debugger and debugger port for it's JavaScript. See the note
 
 In JavaScript, an array is a single variable used to store multiple elements of different data types. It is a special type of object that allows for the storage of a collection of items under a single variable name. Arrays in JavaScript are zero-indexed, resizable, and can contain a mix of different data types. They are not associative arrays, so their elements are accessed using nonnegative integers as indexes. Arrays in JavaScript use numbered indexes, and their elements can be accessed by referring to an index number. Here are some key points about JavaScript arrays:
 
-    JavaScript arrays are best described as arrays, although the typeof operator in JavaScript returns "object" for arrays
+JavaScript arrays are best described as arrays, although the typeof operator in JavaScript returns "object" for arrays
 
-    They are zero-indexed, meaning the first element of an array is at index 0, the second at index 1, and so on, with the last element at the value of the array's length property minus 12
+They are zero-indexed, meaning the first element of an array is at index 0, the second at index 1, and so on, with the last element at the value of the array's length property minus 12.
 
-    Arrays can be created using array literals or the JavaScript new keyword
+Arrays can be created using array literals or the JavaScript new keyword.
 
-    They are not associative in nature, and their elements are accessed using nonnegative integers as indexes
+They are not associative in nature, and their elements are accessed using nonnegative integers as indexes.
 
-    JavaScript arrays can hold different types of data and are used to store multiple values under a single variable name
+JavaScript arrays can hold different types of data and are used to store multiple values under a single variable name
 
 You can add elements to an array in JavaScript using the push(), unshift(), splice(), and concat() methods. Here's a brief overview of each method:
 
-Using push(): This method adds one or more elements to the end of an array.
+- push(): This method adds one or more elements to the end of an array.
 
     let array = [1, 2, 3];
     array.push(4, 5);
     // Output: [1, 2, 3, 4, 5]
 
-Using unshift(): It adds one or more elements to the beginning of an array.
+- unshift(): It adds one or more elements to the beginning of an array.
 
     let array = [1, 2, 3];
     array.unshift(0);
     // Output: [0, 1, 2, 3]
 
-Using splice(): This method can add elements at any specified position in the array.
+- splice(): This method can add elements at any specified position in the array.
 
      let array = [1, 2, 3];
      array.splice(1, 0, 4, 5);
      // Output: [1, 4, 5, 2, 3]
 
-Using concat(): It creates a new array by merging existing arrays.
+- concat(): It creates a new array by merging existing arrays.
 
     let array1 = [1, 2, 3];
     let array2 = [4, 5];
@@ -341,10 +395,10 @@ Removing Elements from an Array in JavaScript
 
 To remove elements from an array in JavaScript, you can use the pop(), shift(), splice(), or filter() methods. Here's a brief overview of each method:
 
-    Using pop(): This method removes the last element from an array.
-    Using shift(): It removes the first element from an array.
-    Using splice(): This method can remove elements from any specified position in the array.
-    Using filter(): It creates a new array with elements that pass the test implemented by the provided function.
+- pop(): This method removes the last element from an array.
+- shift(): It removes the first element from an array.
+- splice(): This method can remove elements from any specified position in the array.
+- filter(): It creates a new array with elements that pass the test implemented by the provided function.
 
 Looping Through an Array in JavaScript
 
@@ -378,35 +432,31 @@ These methods provide flexibility in adding, removing, and iterating through ele
 
 To remove all elements from an array in JavaScript, you can set the array's length to 0 or use the splice() method. Here's how to do it:
 
-    Setting the Array's Length to 0:
+- Setting the Array's Length to 0:
 
     let array = [1, 2, 3, 4, 5];
     array.length = 0;
     // Output: []
 
-Using the splice() Method:
+- splice() Method:
 
     let array = [1, 2, 3, 4, 5];
     array.splice(0, array.length);
     // Output: []
 
-Checking if an Element Exists in an Array in JavaScript
-
 You can check if an element exists in an array in JavaScript using the includes() method or the indexOf() method. Here's how to do it:
 
-Using the includes() Method:
+- includes() Method:
 
     let array = [1, 2, 3, 4, 5];
     array.includes(3);
     // Output: true
 
-Using the indexOf() Method:
+- indexOf() Method:
 
     let array = [1, 2, 3, 4, 5];
     array.indexOf(3) !== -1;
     // Output: true
-
-Sorting an Array in JavaScript
 
 You can sort an array in JavaScript using the sort() method. By default, the sort() method sorts the elements as strings in alphabetical and ascending order. Here's how to use it:
 
@@ -428,8 +478,6 @@ To remove duplicates from an array in JavaScript, you can use the filter() metho
 
 This code creates a new array by filtering out duplicate elements from the original array.
 
-Reversing an Array in JavaScript
-
 You can reverse the elements of an array in JavaScript using the reverse() method. Here's an example:
 
     let array = [1, 2, 3, 4, 5];
@@ -437,8 +485,6 @@ You can reverse the elements of an array in JavaScript using the reverse() metho
     // Output: [5, 4, 3, 2, 1]
 
 The reverse() method changes the original array by reversing its elements in place.
-
-Shuffling an Array in JavaScript
 
 There are multiple ways to shuffle an array in JavaScript. One common approach is to use the Fisher-Yates algorithm. Here's an example of shuffling an array using this algorithm:
 
@@ -597,7 +643,7 @@ Promises also support chaining, which allows you to synchronize multiple asynchr
 
 ## Destructuring in JavaScript
 
-Destructuring in JavaScript allows you to extract values from arrays or properties from objects into distinct variables. It's available in ES6 and later versions. Here's a summary of how to do destructuring in ES5, ES6, and ES7, as well as the types of things that can be destructured:
+Destructuring in JavaScript allows you to extract values from arrays or properties from objects into distinct variables. It's available in ES6 and later versions. Here's a summary of how to do destructuring in ES6, and ES7, as well as the types of things that can be destructured:
 
 In ES5, there is no direct way to destructure objects or arrays.
 
@@ -611,10 +657,76 @@ Object Destructuring
     const { a, b } = { a: 1, b: 2 };
 
 ES7 doesn't introduce any new features related to destructuring.
+
 Types of Things that Can be Destructured
 
-    Arrays
-    Objects
-    Computed object property names
-    Invalid JavaScript identifier as a property name
-    Destructuring primitive values, which will be wrapped into the corresponding wrapper object
+- Arrays
+- Objects
+- Computed object property names
+- Invalid JavaScript identifier as a property name
+- Destructuring primitive values, which will be wrapped into the corresponding wrapper object
+
+## JavaScript Keywords
+
+I believe this list of JavaScript keywords is complete.
+
+await, break, case, catch, class, const, continue, debugger, default, delete, do, else, enum, export
+extends. false, finally, for, function, if, implements, import, in, instanceof, interface, let, new
+null, package, private, protected, public. return, super, switch, static, this, throw, try, true
+typeof, var, void, while, with, yield, abstract, arguments, boolean, byte, char, double, enum, eval,
+export, final, float, goto, implements, import, int, interface, long, native, package, private, protected
+public, short, static, synchronized, throws, transient, volatile
+
+## JavaScript Identifiers
+
+Here is a list of rules for JavaScript identifiers:
+
+- An identifier must start with a letter, underscore (_), or dollar sign ($).
+- Subsequent characters can be letters, digits, underscores, or dollar signs.
+- Identifiers are case-sensitive.
+- Identifiers cannot be the same as JavaScript keywords or reserved words.
+
+For example, valid identifiers include myVar, _test, and $result. Invalid identifiers include break, 1test, and new
+
+These rules define the naming conventions for variables, functions, classes, and other entities in JavaScript.
+
+Some examples of JavaScript identifiers include:
+
+- Variable names: myVar, count, totalAmount
+- Function names: calculateTotal, validateInput
+- Constant names: PI, MAX_SIZE
+- Property names: user.name, order.totalAmount
+
+How JavaScript Identifiers Are Used in Code:
+
+JavaScript identifiers are used to name variables, functions, constants, properties, and other elements in a program. They help in identifying and referencing these program entities throughout the code. For example, in the statement let myVar = 10;, myVar is an identifier for a variable
+
+Difference Between a Variable and an Identifier in JavaScript:
+
+In JavaScript, an identifier is the name given to a variable, function, or other program entity, while a variable is a storage location associated with an identifier. For example, in the statement let myVar = 10;, myVar is the identifier, and it is associated with the variable that stores the value 10
+
+Best Practices for Naming JavaScript Identifiers:
+
+When naming JavaScript identifiers, it's important to follow these best practices:
+
+- Use descriptive names that indicate the purpose of the identifier, such as totalPrice or calculateArea.
+- Start with a letter, underscore (_), or dollar sign ($).
+- Use camelCase for variable and function names, and PascalCase for class names.
+- Avoid using single character names, except for simple loop counters.
+- Be consistent with naming conventions throughout your codebase
+
+Declaration and Initialization of JavaScript Identifiers
+JavaScript identifiers are declared and initialized as follows:
+
+- Declaration: Use the let, const, or var keyword to declare a variable, followed by the identifier name. For example, let myVar;.
+
+- Initialization: Assign a value to the variable using the assignment operator (=). For example, myVar = 10; or let myVar = 10;
+  for declaration  and initialization in a single step
+
+Scope of a JavaScript Identifier:
+
+The scope of a JavaScript identifier refers to the region of the code where the identifier is accessible. In JavaScript, the scope of an identifier is determined by where it is declared. There are three types of scope:
+
+- Global scope: Identifiers declared outside of any function or block have global scope and are accessible throughout the code.
+- Local scope: Identifiers declared within a function or block have local scope and are only accessible within that function or block.
+- Block scope: Identifiers declared with let and const have block scope, meaning they are only accessible within the block where they are defined

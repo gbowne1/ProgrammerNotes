@@ -6,6 +6,7 @@ Node.js is a JavaScript runtime environment that allows the execution of JavaScr
 
 Node.js and JavaScript are related but serve different purposes. JavaScript is a scripting language
 used for writing scripts on websites and is mostly used on the client-side. On the other hand,
+
 Node.js is a JavaScript runtime environment that allows JavaScript code to run outside the browser,
 primarily on the server-side. Here are the key differences between Node.js and JavaScript:
 
@@ -35,6 +36,16 @@ Node.js can be used to build libraries, packages or applications for the browser
 Packages and libraries are usually published to NPM, Yarn or PNPM.
 
 While there are some great tutorials, it can still be a bit confusing.  Many of these were published a number of years ago.
+
+Node.js is not a framework, but a JavaScript runtime environment. It is a platform that executes code and communicates with an operating system.
+
+While Node.js can be used on its own, many developers use it with dedicated frameworks such as Express, Meteor, and Sails to speed up development and provide a set of reusable tools. These frameworks offer different types of support, such as MVC, full-stack MVC, and REST API frameworks1
+
+Therefore, Node.js can be used independently, but developers often use it with frameworks to enhance productivity and efficiency.
+
+Node.js can be used without a specific framework. Some examples of Node.js applications that do not use a stack or framework include custom server-side code for handling HTTP requests, real-time chat applications, and command-line toolsThe benefits of using Node.js without a stack or framework include the flexibility to create custom solutions tailored to specific requirements, a deeper understanding of the underlying technology, and the ability to avoid the overhead of a framework, which can be beneficial for certain types of applications
+
+When using Node.js without a stack or framework, developers may face challenges such as the need to handle low-level details, increased development time for common operations, and the absence of built-in features provided by frameworks, which can lead to the need for custom implementation of such features
 
 ## Obtaining Node.js
 
@@ -195,3 +206,17 @@ The localhost ports typically used with Node.js are commonly in the range of 300
 ## Node.js environement and environement variables
 
 Using the Node.js environment especially within a web application or framework typcially requires installing the npm package `dotenv` so that you can use a `.env` or `variable.env` file to pass certain things along like ports
+
+## Installing Node.js packages
+
+First of all, you should go the included read make-a-package-json.md file, although you can create a `package.json` file generated automatically by running `npm init` or `npm init -y` and answer the questions it gives you.  But unless you know what to answer the questions here with, it might be in your best interest to create your own `package.json` file.
+
+Once you decide which package(s) you will be installing. Install the required package(s) with whatever your package manager you are using. This will automatically create a `node_modules` folder or directory in your project.  NPM will use `npm install packagename`, replacing packagename with whatever package you are installing.  Yarn will use
+
+Ideally, this  `node_modules` should not be commited to version control, git, etc. and should this should be added to the `.gitignore` file because it will include the path to the modules you used on your computer in the contents of this folder/directory.  However, There's no harm in committing this to version control like git.  I would suggest that from here, you do your own research on this.  My thoughts on this is that everyone who will use `yarn install` or `npm install` the requirements from the package.json file of your library, package or web application should ideally have their own unique version of the `node_modules` folder with the paths to the installation(s) of these packages on their own system.
+
+## Handy, useful stuff in Node.js
+
+If you use the `npm outdated` command done in bash/shell/command/terminal will list the outdated packages that are listed in your package.json file in a table.
+
+To update packages you can use the `npm update` command.

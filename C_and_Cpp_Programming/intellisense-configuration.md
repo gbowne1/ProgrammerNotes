@@ -42,8 +42,10 @@ It generally looks like this in Linux:
    "limitSymbolsToIncludedHeaders": true,
    "intelliSenseMode": "linux-gcc-x86",
    "configurationProvider": "ms-vscode.cmake-tools",
-   "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
-   }
+   "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+   "enableConfigurationSquiggles": "",
+   "mergeConfigurations": "",
+   },
   ],
  "version": 4
 }

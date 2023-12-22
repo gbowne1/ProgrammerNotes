@@ -21,7 +21,7 @@ command line/shell/terminal/console to use your editor or use the GUI or user in
 feel strongly about the editor or IDE they use.  You should use the one that gets the job done for you.
 
 This should go without saying, but you should try a few out before you settle on one and do not rely on what
-someone told you their editor or IDE is.  You might or might not like the first editor or IDE you choose.
+someone told you their editor or IDE is.  You might or might not like the first editor or IDE you choose
 
 ## Projects and what to make
 

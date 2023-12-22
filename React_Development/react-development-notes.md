@@ -12,7 +12,7 @@ There's some things I have learned via getting contributions to my React applica
 
 React is typically used in conjunction or with other things called a stack or a tech stack.
 
-A typical tech stack, whether full stack or not, consists of various components that work together to build an application. For a web application, a tech stack usually includes both frontend and backend technologies. Some common components of a tech stack are:
+A typical tech stack, whether `full stack` or not, consists of various components that work together to build an application. For a web application, a tech stack usually includes both frontend and backend technologies. Some common components of a tech stack are:
 
 Frontend:
 

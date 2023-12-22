@@ -112,10 +112,10 @@ There are various types of selectors in CSS that are used to target HTML element
 
 And in your HTML document:
 
-```html
-<p class="highlight">This is a highlighted paragraph.</p>
-<div class="highlight">This is a highlighted div.</div>
-```
+    ```html
+    <p class="highlight">This is a highlighted paragraph.</p>
+    <div class="highlight">This is a highlighted div.</div>
+    ```
 
 This will apply the specified styles to all elements with the "highlight" class. Class selectors allow you to apply unique style properties to groups of HTML elements to achieve your desired web page appearance
 
@@ -123,19 +123,15 @@ This will apply the specified styles to all elements with the "highlight" class.
 
     A CSS ID selector is used to select a specific HTML element based on the value of its id attribute, which must be unique within a page. To use an ID selector in CSS, you write a hash (#) followed by the ID of the element, and then define the style properties you want to apply to the element in curly brackets. Here's an example of how to use an ID selector:
 
-```css
-#idname {
-  /* Define properties here */
-}
-```
+    #idname {
+      Define properties here
+    }
 
 The IDs are used to identify a single element, and they have a higher specificity than classes, making them useful for applying specific styles to individual elements. In contrast, a class selector is used to select elements with a specific class attribute, and it can be applied to multiple elements. Here's an example of a class selector:
 
-```css
-.class-name {
-  /* Define properties here */
-}
-```
+    .class-name {
+      /* Define properties here */
+    }
 
 In general, it's a best practice to use IDs for unique elements and classes for multiple elements, and to avoid using IDs for styling purposes in order to keep the styling separate from the content
 
@@ -155,11 +151,9 @@ Attribute selectors provide a powerful way to target and style elements based on
 
 CSS rules should not be empty and your editor or IDE might even warn you about that:
 
-```css
-body {
-   /* Not a great idea to leave this part empty */
-};
-```
+    body {
+       /* Not a great idea to leave this part empty */
+    };
 
 ## CSS Variables
 
@@ -167,15 +161,13 @@ CSS variables, also known as custom properties, are entities defined by CSS auth
 
 To declare a CSS variable, you use the following syntax:
 
-```css
-:root {
---primary-color: blue;
-}
+    :root {
+    --primary-color: blue;
+    }
 
-.element {
-color: var(--primary-color);
-}
-```
+    .element {
+    color: var(--primary-color);
+    }
 
 In this example, --primary-color is the variable name, and blue is the value. The variable is then accessed using the var() function, as shown in the color property of the .element selector
 
@@ -185,13 +177,11 @@ CSS variables provide a more efficient way to write and manage CSS code, making 
 
 The universal selector in CSS is denoted by an asterisk (*) and is used to select all elements on an HTML page. It matches elements of any type and can be used to apply styles globally. Here's a brief overview of how to use the universal selector:
 
-```css
-* {
-  margin: 0;
-  padding: 0;
-  /*Add more global styles here*/
-}
-```
+    * {
+      margin: 0;
+      padding: 0;
+      /*Add more global styles here*/
+    }
 
 The universal selector selects all elements and can also be used to select all elements inside another element. It is a powerful tool for applying styles globally, but it's important to use it judiciously as it can affect the performance of the page if overused.
 
@@ -217,13 +207,11 @@ These @ rules provide additional functionality and flexibility to CSS, allowing 
 
 To use the :root pseudo-class in CSS, you can define global CSS variables and apply styles to the root element of the document. Here's a brief overview of how to use it:
 
-```css
-:root {
-  --main-color: hotpink;
-  --pane-padding: 5px 42px;
-  /* Add more global variables and styles here */
-}
-```
+    :root {
+      --main-color: hotpink;
+      --pane-padding: 5px 42px;
+      /* Add more global variables and styles here */
+    }
 
 The :root pseudo-class matches the root element of a document, which is typically the `<html>` element in HTML. It is similar to the html selector but has higher specificity, making it useful for declaring global CSS variables that can be accessed throughout the document
 

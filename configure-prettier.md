@@ -8,8 +8,80 @@ Prettier intentionally doesn’t support any kind of global configuration to ens
 
 Prettier also supports the use of plugins to add new languages or formatting rules. Official plugins include @prettier/plugin-php, @prettier/plugin-pug, @prettier/plugin-ruby, and many more. Community plugins are also available for a wide range of languages
 
-If you're following along doing some Web Development, you will find this tool to help you format HTML, CSS, JavaScript. 
+If you're following along doing some Web Development, you will find this tool to help you format HTML, CSS, JavaScript.
+
+## Installation
+
+Prettier is a package installed to your project.  It's available on npmjs.com and can be installed to your project using `npm install prettier`
 
 ## Extensions, Plugins
 
-There are some ESLint plugins and extensions for VSCode.
+There are some Prettier plugins and extensions for VSCode.
+
+First of all, Open the VSCode settings and search for "Editor: Default Formatter" and set it to "esbenp.prettier-vscode". You can also do this to
+your settings.json
+
+There are two handy packages that are useful when using Prettier with ESLint. They are, `eslint-config-prettier` and `eslint-plugin-prettier`.
+
+## Example configuration
+
+Here is an example `.prettierrc` which you can code in JSON or YAML..
+
+    {
+      "singleQuote": true,
+      "trailingComma": "all",
+      "arrowParens": "always",
+      "printWidth": 120,
+      "tabWidth": 2,
+      "semi": false,
+      "endOfLine": "auto",
+      "bracketSpacing": false,
+      "jsxSingleQuote": true,
+      "quoteProps": "as-needed",
+      "htmlWhitespaceSensitivity": "css",
+      "insertPragma": false,
+      "proseWrap": "always",
+      "ignorePath": ".prettierignore",
+      "useTabs": false,
+      "jsxBracketSameLine": true,
+      "requirePragma": true,
+      "vueIndentScriptAndStyle": true
+      "overrides": [
+        {
+          "files": "*.test.js",
+          "options": {
+            "printWidth": 80
+          }
+        }
+      ],
+      "plugins": ["prettier-plugin-foo"]
+    }
+
+I prefer JSON.  There could be more settings.  This covers most of them.  Most of the settings are or at least should be somewhat self-explanatory
+
+Documentation on this file is here: <https://prettier.io/docs/en/configuration.html>
+
+## Node.js configuration
+
+Configuring Prettier for Node.js is slightly different however.
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": "eslint:recommended"
+}
+
+## React configuration
+
+Also, configuring Prettier for React is somewhat different from Node.js and setting up JavaScript linting.
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ]
+}

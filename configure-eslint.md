@@ -40,11 +40,7 @@ As you gain familiarity with ESLint, You should build a baseline configuration a
 
 ## Installing ESLint
 
-Install the ESLint package in your project using npm:
-
-```bash
-npm install --save-dev eslint
-```
+Install the ESLint package in your project `npm install --save-dev eslint`
 
 It should be available via Yarn or other npm-like package managers
 
@@ -67,6 +63,37 @@ module.exports = {
 
 There are plugins for ESLint. An ESLint plugin is an npm module that can contain a set of ESLint rules, configurations, processors, and environments. These plugins often include custom rules and can be used to enforce a style guide and support JavaScript extensions, libraries, and frameworks such as TypeScript, React, and Angular
 
-Each plugin is an npm module with a name in the format of eslint-plugin-<plugin-name>, such as eslint-plugin-react. Plugins can also provide additional environments, custom processors, and configurations
+Each plugin is an npm module with a name in the format of eslint-plugin-<plugin-name>, such as eslint-plugin-react and there are a number of others. Plugins can also provide additional environments, custom processors, and configurations
 
 You should be able to easily find a list of awesome ESLint plugins, configs, etc. on GitHub
+
+If you are using ESLint, especially with Prettier installed, I would suggeste that you should install these packages:
+
+eslint-plugin-prettier
+eslint-plugin-react
+eslint-plugin-jest
+eslint-plugin-jsdoc
+eslint-plugin-mocha
+eslint-plugin-cypress
+eslint-plugin-babel
+eslint-webpack-plugin
+eslint-plugin-filenames
+eslint-plugin-markdown
+eslint-plugin-jsonc
+eslint-plugin-jsx-a11y
+eslint-plugin-safe-jsx
+
+As for config.. install these packages:
+
+eslint-config-prettier (The config plugin for Prettier)
+eslint-config-airbnb-base
+eslint-config-airbnb
+eslint-config-standard (for standard JavaScript)
+eslint-config-react-app (the Create React App config)
+eslint-config-google
+eslint-config-standard-react
+eslint-config-standard-jsx
+eslint-config-react
+
+If you are doing React development, I would suggest installing both the plugin and config for React.  You can look up each one of these on
+npmjs.com and find out what they do.

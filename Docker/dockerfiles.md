@@ -11,7 +11,7 @@ Here are the most common types of instructions:
 - **FROM**: Defines a base for your image.
 - **RUN**: Executes any commands in a new layer on top of the current image and commits the result. RUN also has a shell form for running commands.
 - **WORKDIR**: Sets the working directory for any RUN, CMD, ENTRYPOINT, COPY, and ADD instructions that follow it in the Dockerfile.
-- **COPY**: Copies new files or directories from <src> and adds them to the filesystem of the container at the path <dest>.
+- **COPY**: Copies new files or directories from `<src>` and adds them to the filesystem of the container at the path `<dest>`.
 - `CMD`: Lets you define the default program that is run once you start the container based on this image.
 
 In addition to the `Dockerfile`, there are other files used in the Docker ecosystem, such as the `docker-compose.yml file`, which is used to define and run multi-container Docker applications

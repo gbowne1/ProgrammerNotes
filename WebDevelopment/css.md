@@ -203,6 +203,18 @@ In addition to @media and @import, there are other @ rules in CSS that serve dif
 
 These @ rules provide additional functionality and flexibility to CSS, allowing you to define custom fonts, create animations, apply styles conditionally, and specify the style of printed pages
 
+When using @media queries, both min-width and max-width are important, but their usage depends on the specific design approach.
+
+Use min-width when following a "mobile-first" approach, where the default styles are for mobile and then enhanced for larger screens. This means the styles will be applied when the viewport width is equal to or greater than the specified width.
+
+Use max-width when following a "desktop-first" approach, where the default styles are for larger screens and then adjusted for smaller screens. This means the styles will be applied when the viewport width is equal to or less than the specified width
+
+For example, to apply styles when the viewport width is less than or equal to 600px, you would use @media (max-width: 600px) { ... }
+Both min-width and max-width are essential for creating responsive designs that adapt to various screen sizes and devices2
+The choice between min-width and max-width depends on the specific design strategy, such as mobile-first or desktop-first, and the behavior you want to achieve for different screen sizes.
+
+In short, min-width is suitable for applying styles as the viewport width increases, following a mobile-first approach. On the other hand, max-width is used for applying styles as the viewport width decreases, following a desktop-first approach
+
 ## Advanced CSS
 
 To use the :root pseudo-class in CSS, you can define global CSS variables and apply styles to the root element of the document. Here's a brief overview of how to use it:

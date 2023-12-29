@@ -240,3 +240,14 @@ To update packages you can use the `npm update` command.
 You might want to use `npx` in your Node.js environment.  `npx` stands for Node Package eXecute and is an NPM package runner. It allows developers to execute any JavaScript package available on the NPM registry without even installing it. npx is useful for testing different versions of a Node.js package or module without having to install the dependencies in your local node_modules folder.
 
 If you do `npx packagename`, and the package is not found, it will be downloaded and then run.
+
+## Making a Node.js server
+
+A Node.js server is typically named `index.js` or `server.js` and the npm package that should be installed for this to work is `express`.
+You could also use Fastify or NestJS.
+
+## Why Node.js
+
+Well, Node.js is known for its single-threaded and asynchronous nature, making it very fast and ideal for processing multiple requests using a single thread asynchronously
+
+Compared to other server-side technologies, Node.js is particularly suitable for real-time web apps, back-end API services, and traditional websites, as it was designed with real-time, push-based architectures in mind.

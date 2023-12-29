@@ -39,26 +39,26 @@ The differences between ES5, ES6, and ES7 in JavaScript can be summarized as fol
 
 ES5, Also known as ECMAScript 2009, released in 2009.
 
-    Variables: Only one way to define variables using the var keyword.
-    Performance: Lower performance compared to ES6.
-    Object Manipulation: Time-consuming compared to ES6.
-    Function Definition: Both function and return keywords are used to define a function.
-    Support: Supports primitive data types such as string, number, boolean, null, and undefined.
+- Variables: Only one way to define variables using the var keyword.
+- Performance: Lower performance compared to ES6.
+- Object Manipulation: Time-consuming compared to ES6.
+- Function Definition: Both function and return keywords are used to define a function.
+- Support: Supports primitive data types such as string, number, boolean, null, and undefined.
 
 ES6, Also known as ECMAScript 2015, released in 2015.
 
-    Variables: Introduces two new ways to define variables: let and const.
-    Performance: Higher performance than ES5.
-    Object Manipulation: Less time-consuming compared to ES5.
-    Function Definition: Introduces arrow functions, eliminating the need for the function keyword in some cases.
-    Data Types: Adds a new primitive data type, symbol, for supporting unique values.
+- Variables: Introduces two new ways to define variables: let and const.
+- Performance: Higher performance than ES5.
+- Object Manipulation: Less time-consuming compared to ES5.
+- Function Definition: Introduces arrow functions, eliminating the need for the function keyword in some cases.
+- Data Types: Adds a new primitive data type, symbol, for supporting unique values.
 
 ES7, Also known as ECMAScript 2016.
 
-    Features: Builds upon ES6 and introduces new features such as async/await, exponentiation operator, and more.
-    Transpilation: Requires transpilation to convert ES7 code to ES5 for compatibility with browsers.
-    Spread Operator: Introduces the spread operator (...) for merging arrays and objects.
-    Template Literal: Introduces template literals using backticks (`) for easy string interpolation.
+- Features: Builds upon ES6 and introduces new features such as async/await, exponentiation operator, and more.
+- Transpilation: Requires transpilation to convert ES7 code to ES5 for compatibility with browsers.
+- Spread Operator: Introduces the spread operator (...) for merging arrays and objects.
+- Template Literal: Introduces template literals using backticks (`) for easy string interpolation.
 
 ## Learning JavaScript
 
@@ -212,16 +212,17 @@ A function in JavaScript is a block of reusable code designed to perform a speci
 
 ## JavaScript classes
 
- Classes in JavaScript are a way to create objects using a template. They were introduced in ECMAScript 2015 (ES6) to provide a cleaner way to follow object-oriented programming patterns. JavaScript is a prototype-based language, and classes are built on prototypes but also have some syntax and semantics that are unique to classes. Here are some key points about classes in JavaScript:
+Classes in JavaScript are a way to create objects using a template. They were introduced in ECMAScript 2015 (ES6) to provide a cleaner way to follow object-oriented programming patterns. JavaScript is a prototype-based language, and classes are built on prototypes but also have some syntax and semantics that are unique to classes. Here are some key points about classes in JavaScript:
 
-    Definition: Classes are defined using the class keyword, and they can be defined in two ways: a class expression or a class declaration.
+Definition: Classes are defined using the class keyword, and they can be defined in two ways: a class expression or a class declaration.
 
-    Constructor: The constructor method is a special method that is executed automatically when a new object is created from a class. It is used to initialize object properties.
+- Constructor: The constructor method is a special method that is executed automatically when a new object is created from a class. It is used to initialize object properties.
 
-    Methods: Class methods are created with the same syntax as object methods. They are defined within the class and can be called on objects created from the class.
+- Methods: Class methods are created with the same syntax as object methods. They are defined within the class and can be called on objects created from the class.
 
-    Static Methods and Fields: Classes can also have static methods and static fields, which are shared by all instances of the class.
-    Private Properties: Private fields can be used to define private properties within a class, which are not accessible from outside the class.
+- Static Methods and Fields: Classes can also have static methods and static fields, which are shared by all instances of the class.
+
+- Private Properties: Private fields can be used to define private properties within a class, which are not accessible from outside the class.
 
 Classes in JavaScript provide a more structured way to create and work with objects, and they are especially useful for implementing object-oriented programming concepts.
 
@@ -258,11 +259,11 @@ Usage of tabs and spaces in Javascript is talked about a lot.
 
 The debate between using tabs and spaces in JavaScript (and other programming languages) has been ongoing for some time. Here are some key points from the search results
 
-Tabs: Tabs are considered by some to be the democratic way to handle white space, as anyone can set them up how they like them. They are also descriptive, telling the editor the amount of indentation that should be added
+- Tabs: Tabs are considered by some to be the democratic way to handle white space, as anyone can set them up how they like them. They are also descriptive, telling the editor the amount of indentation that should be added
 
-Spaces: Spaces are displayed visually the same across any system, ensuring consistency. Different platforms and editors may display tabs with varying sizes, leading to potential issues with code alignment and readability
+- Spaces: Spaces are displayed visually the same across any system, ensuring consistency. Different platforms and editors may display tabs with varying sizes, leading to potential issues with code alignment and readability
 
-Debate: The debate between tabs and spaces is not just about personal preference, but also about consistency, readability, and potential issues with code alignment and display across different platforms and editors
+- Debate: The debate between tabs and spaces is not just about personal preference, but also about consistency, readability, and potential issues with code alignment and display across different platforms and editors
 
 The choice between tabs and spaces is ultimately a matter of personal or team preference, as both can be used effectively. Consistency within a codebase is key, regardless of whether tabs or spaces are chosen for indentation
 
@@ -300,13 +301,13 @@ While it may seem that the applications you are working on function without any 
 
 Linting JavaScript code offers several benefits, including:
 
-    Error Prevention: Linting helps identify and eliminate common errors and problematic code patterns, such as the use of undeclared variables, calls to undefined or deprecated functions, and potential syntax issues. This proactive approach reduces the likelihood of bugs and errors before the code is executed, leading to more reliable and stable applications
+- Error Prevention: Linting helps identify and eliminate common errors and problematic code patterns, such as the use of undeclared variables, calls to undefined or deprecated functions, and potential syntax issues. This proactive approach reduces the likelihood of bugs and errors before the code is executed, leading to more reliable and stable applications
 
-    Code Quality: By enforcing coding standards and best practices, linting contributes to the overall quality and readability of the code. It helps maintain a consistent coding style across the codebase, making the code easier to understand and maintain for the entire development team
+- Code Quality: By enforcing coding standards and best practices, linting contributes to the overall quality and readability of the code. It helps maintain a consistent coding style across the codebase, making the code easier to understand and maintain for the entire development team
 
-    Improved Code Review: Linting facilitates more productive code review discussions by automatically flagging potential issues, allowing developers to focus on higher-level design and architecture considerations rather than getting bogged down in trivial, easily preventable error
+- Improved Code Review: Linting facilitates more productive code review discussions by automatically flagging potential issues, allowing developers to focus on higher-level design and architecture considerations rather than getting bogged down in trivial, easily preventable error
 
-    Enhanced Developer Experience: Linting encourages the writing of clean and well-structured code, which can lead to a more enjoyable and efficient development experience. Developers can benefit from immediate feedback on their code, leading to faster identification and resolution of issues
+- Enhanced Developer Experience: Linting encourages the writing of clean and well-structured code, which can lead to a more enjoyable and efficient development experience. Developers can benefit from immediate feedback on their code, leading to faster identification and resolution of issues
 
 ## Inline scripting
 
@@ -579,7 +580,9 @@ This code uses the filter() method in combination with the findIndex() method to
 
 To use async and await in JavaScript, you can follow these steps:
 
-    Declare an Async Function: Use the async keyword before a function to declare it as an async function. This means the function always returns a promise. For example:
+Declare an Async Function: Use the async keyword before a function to declare it as an async function. This means the function always returns a promise
+
+For example:
 
     async function myFunction() {
       return "Hello";

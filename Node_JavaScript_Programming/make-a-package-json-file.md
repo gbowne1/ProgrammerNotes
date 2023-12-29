@@ -109,3 +109,7 @@ In a package.json file, the:
 "peerDependencies" field is used to specify the packages that the current package relies on in order to work
 
 "optionalDependencies" field is used to specify the packages that are not necessary for the application to run, but can be used to provide extra functionality.
+
+## Some other notes
+
+"eslintConfig" must be in JSON

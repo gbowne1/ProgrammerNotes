@@ -59,41 +59,90 @@ module.exports = {
 };
 ```
 
+The docs for configuration are: [Config]<https://eslint.org/docs/latest/use/configure/rules>
+
+## ESLint configuration keys and properties
+
+"extends" - The "extends" key in an ESLint configuration file is used to extend the base configuration by adding additional rules or overriding the existing one
+
+"rules" is the place where you will be adding the lint rules to your configuration.
+
+"env": the "env" key is used to specify the environments for which the ESLint configuration is intended, like the "browser", "node", "commonjs" and "es6".
+
+"plugins" are configurations for the plugins you have installed
+
+"proccessor" - Specifies a preprocessor for the code, such as "prettier/recommended" to enable Prettier integration
+
+"overrides" - The "overrides" key in an ESLint configuration file allows you to define configuration overrides for specific files, paths, or glob patterns
+
+"parser" are configurations for the parser and choosing the parser you will be using.  "babel" is probably the most common parser.
+
+"paserOptions" are options to configure the parser.
+
+"globals" - Specifies additional global variables that are predefined. This can be useful for defining global variables that are not defined in the current file but are used elsewhere
+
+"ignorePatterns" - Allows you to specify files and directories to ignore during the linting process.
+
+"root" - Indicates that the current configuration file is the root configuration, and ESLint should stop looking for further configurations in parent directories
+
+"workspaces" - This configuration is used in a monorepo setup to specify the workspaces to apply the ESLint configuration to.
+
+## Configurations
+
+Common configurations in "rules" are, and they should be:
+
+curly - Requires the use of curly braces for all control statements
+
+quotes - Enforces the consistent use of either single, double, or backticks for string literals. It can be set to "single", "double", or "backtick" to enforce the corresponding style
+
+semi - Enforces the use of semicolons at the end of statements. It can be set to "always" or "never" to require or disallow semicolons, respectively
+
+indent - Enforces consistent indentation. It specifies the number of spaces for indentation and whether to use spaces or tabs
+
+There are more configurations in "rules" that you can set.  Tailor these to your liking.  Add others when you need them.
+
 ## ESLint Plugins
 
 There are plugins for ESLint. An ESLint plugin is an npm module that can contain a set of ESLint rules, configurations, processors, and environments. These plugins often include custom rules and can be used to enforce a style guide and support JavaScript extensions, libraries, and frameworks such as TypeScript, React, and Angular
 
-Each plugin is an npm module with a name in the format of eslint-plugin-<plugin-name>, such as eslint-plugin-react and there are a number of others. Plugins can also provide additional environments, custom processors, and configurations
+Each plugin is an npm module with a name in the format of eslint-plugin-<plugin-name>, such as eslint-plugin-react and there are a number of others. Plugins can also provide additional environments, custom processors, and configurations.
 
-You should be able to easily find a list of awesome ESLint plugins, configs, etc. on GitHub
+You should be able to easily find a list of awesome ESLint plugins, configs, etc. on GitHub and the npmjs site.
 
-If you are using ESLint, especially with Prettier installed, I would suggeste that you should install these packages:
+If you are going to be using ESLint, I would suggest that you should install these packages:
 
-eslint-plugin-prettier
-eslint-plugin-react
-eslint-plugin-jest
-eslint-plugin-jsdoc
-eslint-plugin-mocha
-eslint-plugin-cypress
-eslint-plugin-babel
-eslint-webpack-plugin
-eslint-plugin-filenames
-eslint-plugin-markdown
-eslint-plugin-jsonc
-eslint-plugin-jsx-a11y
-eslint-plugin-safe-jsx
+- eslint-plugin-prettier
+- eslint-plugin-react
+- eslint-plugin-jest
+- eslint-plugin-jsdoc
+- eslint-plugin-mocha
+- eslint-plugin-cypress
+- eslint-plugin-babel
+- eslint-webpack-plugin
+- eslint-plugin-filenames
+- eslint-plugin-markdown
+- eslint-plugin-jsonc
+- eslint-plugin-jsx-a11y
+- eslint-plugin-safe-jsx
 
 As for config.. install these packages:
 
-eslint-config-prettier (The config plugin for Prettier)
-eslint-config-airbnb-base
-eslint-config-airbnb
-eslint-config-standard (for standard JavaScript)
-eslint-config-react-app (the Create React App config)
-eslint-config-google
-eslint-config-standard-react
-eslint-config-standard-jsx
-eslint-config-react
+- eslint-config-prettier (The config plugin for Prettier)
+- eslint-config-airbnb-base
+- eslint-config-airbnb
+- eslint-config-standard (for standard JavaScript)
+- eslint-config-react-app (the Create React App config) # Not Needed if you are not using Create React App
+- eslint-config-google
+- eslint-config-standard-react
+- eslint-config-standard-jsx
+- eslint-config-react
 
 If you are doing React development, I would suggest installing both the plugin and config for React.  You can look up each one of these on
-npmjs.com and find out what they do.
+npmjs.com and find out what they do.  I would suggest only installing eslint-plugin-prettier, eslint-plugin-react, eslint-config-react and eslint-config-prettier when you are first starting out as a beginner.  You can add more.  The others may not be helpful to you, but you should be aware of them.
+
+## Disabling ESLint rules
+
+You can inline disable ESLint's rules when necessary.
+
+use the // eslint-disable-rulename or /* eslint-disable-rulename */
+

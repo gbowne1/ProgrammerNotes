@@ -39,13 +39,16 @@ Here is an example `.prettierrc` which you can code in JSON or YAML..
       "jsxSingleQuote": true,
       "quoteProps": "as-needed",
       "htmlWhitespaceSensitivity": "css",
+      "embeddedLanguageFormatting": "auto",
       "insertPragma": false,
       "proseWrap": "always",
       "ignorePath": ".prettierignore",
       "useTabs": false,
-      "jsxBracketSameLine": true,
+      "rangeStart": 0,
+      "jsxBracketSameLine": true,    (using jsxBraketSameLine is deprecated)
       "requirePragma": true,
-      "vueIndentScriptAndStyle": true
+      "vueIndentScriptAndStyle": true,
+      "parser": babel",
       "overrides": [
         {
           "files": "*.test.js",
@@ -75,6 +78,7 @@ Configuring Prettier for Node.js is slightly different however.
 ## React configuration
 
 Also, configuring Prettier for React is somewhat different from Node.js and setting up JavaScript linting.
+
 {
   "env": {
     "browser": true,
@@ -85,3 +89,35 @@ Also, configuring Prettier for React is somewhat different from Node.js and sett
     "plugin:react/recommended"
   ]
 }
+
+## JavaScript configuration file
+
+In order to make the file using JavaScript it needs to be wrapped in a module.exports like this example, and it needs to be name `.eslintrc.js`
+
+     ```js
+     module.exports = {
+     // For JSON files
+     overrides: [
+      {
+      files: '*.json',
+      options: {
+       tabWidth: 2,
+       useTabs: false,
+       trailingComma: 'none',
+       arrowParens: 'avoid',
+      },
+      },
+     ],
+     // For JavaScript and JSX files
+     semi: false,
+     trailingComma: 'all',
+     singleQuote: true,
+     printWidth: 80,
+     tabWidth: 2,
+     useTabs: false,
+     bracketSpacing: true,
+     jsxBracketSameLine: false,
+     arrowParens: 'avoid',
+     parser: 'babel', // Use Babel parser for ES7 and JSX syntax
+     };
+     ```

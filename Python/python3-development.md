@@ -1,10 +1,6 @@
 # Create a Python program
 
-In Python, a program usually starts with importing python libraries with
-
-```py
-include
-```
+In Python, a program usually starts with importing python libraries with `include`
 
 The configuration files used for Black, Flake8, Pylint, and Pytest are as follows:
 
@@ -17,3 +13,11 @@ The configuration files used for Black, Flake8, Pylint, and Pytest are as follow
 - Pytest: Pytest can be configured using a configuration file named pytest.ini. Other configuration files such as setup.cfg and tox.ini can also be used to hold pytest configuration if they have a [tool:pytest] section
 
 It is important to note that some of these tools may need a bit of tweaking to resolve conflicts, and there are other popular Python linters and formatters besides the ones mentioned here
+
+## A python Hello World
+
+Here is a basic Python 3 Hello World
+
+   ```py
+   print("Hello, World!")
+   ```

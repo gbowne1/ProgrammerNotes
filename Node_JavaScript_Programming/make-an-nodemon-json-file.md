@@ -30,24 +30,24 @@ Here is the `nodemon.json` File Structure:
 
 ```json
 {
-	"watch": [
-		"src/client",
-		"src/server"
-	],
-	"ext": "js,json",
-	"exec": "node src/server/server.js",
-	"restartDelay": "",
-	"args": "",
-	"nodeArgs": "",
-	"verbose": true,
-	"watchOptions": "",
-	"ignore": [
-		"src/**/*.test.js"
-	],
-	"delay": 1000,
-	"execMap": {
-		"js": "node --inspect"
-	}
+ "watch": [
+  "src/client",
+  "src/server"
+ ],
+ "ext": "js,json",
+ "exec": "node src/server/server.js",
+ "restartDelay": "",
+ "args": "",
+ "nodeArgs": "",
+ "verbose": true,
+ "watchOptions": "",
+ "ignore": [
+  "src/**/*.test.js"
+ ],
+ "delay": 1000,
+ "execMap": {
+  "js": "node --inspect"
+ }
 }
 ```
 

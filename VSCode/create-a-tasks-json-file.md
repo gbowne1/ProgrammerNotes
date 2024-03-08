@@ -10,27 +10,27 @@ The official documentation for this is: <https://code.visualstudio.com/docs/edit
 
 Here is the file structure:
 
-```json
-{
-	// See https://go.microsoft.com/fwlink/?LinkId=733558
-	// for the documentation about the tasks.json format
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "process",
-			"label": "",
-			"command": "",
-			"args": [],
-			"options": {},
-			"problemMatcher": "",
-			"group": "",
-			"presentation": {},
-			"dependsOn": "",
-			"isBackground": true,
-		}
-	],
-}
-```
+ ```json
+ {
+ // See https://go.microsoft.com/fwlink/?LinkId=733558
+ // for the documentation about the tasks.json format
+ "version": "2.0.0",
+ "tasks": [
+ {
+ "type": "process",
+ "label": "",
+ "command": "",
+ "args": [],
+ "options": {},
+ "problemMatcher": "",
+ "group": "",
+ "presentation": {},
+ "dependsOn": "",
+ "isBackground": true,
+ }
+ ],
+ }
+ ```
 
 In `type`: The type of task to be executed.
 

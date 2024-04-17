@@ -36,6 +36,7 @@ Here is an example `.prettierrc` which you can code in JSON or YAML..
       "semi": false,
       "endOfLine": "auto",
       "bracketSpacing": false,
+      "bracketSameLine": true,
       "jsxSingleQuote": true,
       "quoteProps": "as-needed",
       "htmlWhitespaceSensitivity": "css",
@@ -57,7 +58,8 @@ Here is an example `.prettierrc` which you can code in JSON or YAML..
           }
         }
       ],
-      "plugins": ["prettier-plugin-foo"]
+      "plugins": ["prettier-plugin-foo"],
+      "react/jsx-max-props-per-line": [1, { "when": "always" }]
     }
 
 I prefer JSON.  There could be more settings.  This covers most of them.  Most of the settings are or at least should be somewhat self-explanatory

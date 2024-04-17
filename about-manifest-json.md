@@ -33,24 +33,24 @@ At a minimum, a manifest file should contain the following manifest members: "na
 
 An example manifest.json,
 
-    ```json
-    {
+	```json
+	{
 	"name": "My Web App",
 	"displayName": "My Web App",
 	"background_color": "#ffffff",
 	"dir": "ltr",
 	"display": "standalone",
 	"icons": [
-		{
-			"src": "icon-192.png",
-			"sizes": "192x192",
-			"type": "image/png"
-		},
-		{
-			"src": "icon-512.png",
-			"sizes": "512x512",
-			"type": "image/png"
-		}
+	{
+	"src": "icon-192.png",
+	"sizes": "192x192",
+	"type": "image/png"
+	},
+	{
+	"src": "icon-512.png",
+	"sizes": "512x512",
+	"type": "image/png"
+	}
 	],
 	"lang": "en-US",
 	"orientation": "portrait",
@@ -60,19 +60,19 @@ An example manifest.json,
 	"manifest_version": 2,
 	"type": "web_app",
 	"meta": {
-		"author": "John Doe",
-		"description": "A simple web app",
-		"version": "1.0.0"
+	"author": "John Doe",
+	"description": "A simple web app",
+	"version": "1.0.0"
 	},
 	"dependencies": {
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2"
+	"react": "^17.0.2",
+	"react-dom": "^17.0.2"
 	},
 	"defaultWidth": 800,
 	"defaultHeight": 600,
 	"resizeX": true
-    }
-    ```
+	}
+	```
 
 The manifest.json file is used in web development to define the properties and behavior of web applications and extensions. It is written in JSON (JavaScript Object Notation) format and contains various metadata and configuration settings that help browsers and platforms understand and interact with the application or extension. This file typically includes information such as the application or extension name, version number, description, icons, permissions, and background scripts
 

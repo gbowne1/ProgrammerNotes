@@ -53,11 +53,11 @@ Typical CSS files that are used to contain global styles are `index.css` and `ap
 
 In CSS, there are special characters:
 
-- ";" is used to separate individual declarations in a style rule.
+- ";" is used to separate individual declarations in a style rule. They are required.
 
 - "$" is not a valid character in CSS and is typically used in preprocessors like Sass for variables.
 
-- "#" is used to denote an ID selector in CSS.
+- "#" is used to denote an ID selector in CSS.  It targets the id="" in the line of html tag.
 
 - "~" is used in CSS to select sibling elements that are preceded by a specified element.
 
@@ -73,11 +73,11 @@ In CSS, there are special characters:
 
 - "!" is used in CSS to denote the important flag, which gives a declaration higher priority.
 
-- "{" and "}" are used to enclose the declarations within a style rule.
+- "{" and "}" are used to enclose the declarations within a style rule. This is required.
 
 - ":" are used for pseudo-classes, which are used to define the special state of an element. For example, ":hover" is a pseudo-class that
 matches when the user designates an element (with some pointing device), but does not activate it. Another example is ":visited", which
-matches links that have been visited by the user.
+matches links that have been visited by the user.  This is required.
 
 - "::" are used for pseudo-elements, which are used to style specified parts of an element. For example, "::first-line" is a pseudo-element that matches the first formatted line of a paragraph.
 
@@ -89,6 +89,8 @@ matches links that have been visited by the user.
 - "&" is used in CSS preprocessors like Sass and LESS to reference the parent selector in nested selectors.
 
 - "*" is used as the universal selector in CSS to select any element.
+
+- "--" double hyphen is used in CSS variables for custom declarations of variable names inside a var().
 
 There are various types of selectors in CSS that are used to target HTML elements for styling. Some of the key types of selectors include
 

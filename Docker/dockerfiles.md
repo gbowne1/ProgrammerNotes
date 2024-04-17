@@ -1,4 +1,15 @@
-# Creating a `Dockerfile`
+# About Docker
+
+## Configuring Docker
+
+In order to configure Docker, there are several files that will be needed, depending how you want to use Docker.
+
+docker-compose.yml
+.dockerignore
+Dockerfile
+devcontainer.json
+
+## Creating a `Dockerfile`
 
 A `Dockerfile` is a text file that contains a set of instructions for building a Docker image. It is used to automate the process of creating a Docker image by specifying the base image, adding files, installing packages, and configuring the environment
 

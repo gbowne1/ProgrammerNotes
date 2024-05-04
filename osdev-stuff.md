@@ -2,4 +2,8 @@
 
 Here are my notes about x86 32 bit OS development
 
-I would definitely 
+## Languages used
+
+Assembly
+C
+C++

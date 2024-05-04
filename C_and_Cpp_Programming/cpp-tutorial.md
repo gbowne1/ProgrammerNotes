@@ -357,7 +357,7 @@ In C++, when you compile a source file, it is converted into an object file. The
 
 - `.o` file: Also an object file.
 
-- `.s` file: Assembly output of the compiler's compilation phase and have a ".s" extension. They contain the assembly code generated from source
+- `.s` file: Assembly output of the compiler's compilation phase and have a ".s" extension. They contain the assembly code generated from source, this is typically used by MASM or GAS (GNU Assembler or `as`)
 
 Other common compiled object files: In addition to the above, C++ also uses shared libraries (.so files in Unix-based systems, .dll files in Windows) and static libraries (.a files in Unix-based systems, .lib files in Windows) for modularizing code and reusing it across different programs also .exe files.
 

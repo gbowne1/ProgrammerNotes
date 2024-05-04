@@ -6,7 +6,7 @@ REST, which stands for Representational State Transfer, is an architectural styl
     Interaction: REST APIs communicate via HTTP requests to perform standard database functions like creating, reading, updating, and deleting records (also known as CRUD) within a resource. They make use of standard HTTP methods (GET, POST, PUT, DELETE, etc.) and URIs to identify resources.
     Resource Model: A REST API consists of an assembly of interlinked resources, and it uses resource identifiers and hypermedia links to facilitate interactions between client and server components.
 
-In summary, a REST API is an interface that follows the principles of the REST architectural style, providing a standardized and flexible approach to building web-based APIs. For more detailed information, you can refer to the provided sources.
+A REST API is an interface that follows the principles of the REST architectural style, providing a standardized and flexible approach to building web-based APIs. For more detailed information, you can refer to the provided sources.
 
 If you would like to learn more about this, You should review this <https://jsonapi.org/>.
 

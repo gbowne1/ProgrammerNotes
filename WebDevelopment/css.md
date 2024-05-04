@@ -47,7 +47,7 @@ The choice between inline CSS and included (external) CSS can impact performance
 
 Global styles in CSS refer to styles that are applied to the entire document or website, rather than being limited to a specific component or element. They can be achieved in several ways, such as by using the `:root` or `<body>` elements, the unqualified `*` selector, or by creating and importing global CSS files. Global styles are important for creating a consistent and efficient design system, as they allow for the separation of branding/aesthetic from layout, and the treatment of the two as separate concerns.
 
-Typical CSS files that are used to contain global styles are `index.css` and `app.css` (if your page/site is a PWA or App or Web App).
+Typical CSS files that are used to contain global styles are `index.css` and `app.css` (if your page/site is a PWA or App or Web App). `style.css` and `styles.css` are also common filenames used.
 
 ## Special Characters
 
@@ -79,7 +79,7 @@ In CSS, there are special characters:
 matches when the user designates an element (with some pointing device), but does not activate it. Another example is ":visited", which
 matches links that have been visited by the user.  This is required.
 
-- "::" are used for pseudo-elements, which are used to style specified parts of an element. For example, "::first-line" is a pseudo-element that matches the first formatted line of a paragraph.
+- "::" are also used for pseudo-elements, which are used to style specified parts of an element. For example, "::first-line" is a pseudo-element that matches the first formatted line of a paragraph.
 
 - "," is used to separate multiple selectors in a rule, allowing the rule to apply to several elements. For example, "h1, h2, h3" will apply the same style to all h1, h2, and h3 elements.
 

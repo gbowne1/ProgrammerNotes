@@ -56,3 +56,8 @@ I don't use this in Mac or Windows so this would be the best configuration for u
 The default value for the `intelliSenseMode` property in the `c_cpp_properties.json` file is `default`.
 
 This means that the extension will try to automatically detect the correct IntelliSense engine to use based on your project configuration. If the extension is unable to detect the correct engine, it will fall back to using the Clang C++ compiler for x64 architectures.
+
+Well, anyhow.. the attributes this configuration file uses are typically under the header "configuration".
+
+
+name: 

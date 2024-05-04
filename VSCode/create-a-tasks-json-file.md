@@ -34,7 +34,7 @@ Here is the file structure:
 
 In `type`: The type of task to be executed.
 
-The supported types are `"shell"`, `"process"`, `"npm"`, `"grunt"`, `"gulp"`, `"jake"`, `"msbuild"`, `"xcodebuild"`, `"ant"`, `"gradle"`, `"lein"`, `"make"`, `"pdflatex"`, `"python"`, `"ruby"`, `"gcc"`, `"clang"`, `"tsc"`, `"dotnet"`, `"docker-build"`, `"docker-run"`, `"docker-push"`, `"docker-compose"`, `"dart"`, `"dart-analyze"`, `"dart-test"`, `"dart-run"`, `"flutter"`, `"flutter-analyze"`, `"flutter-test"`, and `"flutter-run"`.
+These supported `types` are `"shell"`, `"process"`, `"npm"`, `"grunt"`, `"gulp"`, `"jake"`, `"msbuild"`, `"xcodebuild"`, `"ant"`, `"gradle"`, `"lein"`, `"make"`, `"pdflatex"`, `"python"`, `"ruby"`, `"gcc"`, `"clang"`, `"tsc"`, `"dotnet"`, `"docker-build"`, `"docker-run"`, `"docker-push"`, `"docker-compose"`, `"dart"`, `"dart-analyze"`, `"dart-test"`, `"dart-run"`, `"flutter"`, `"flutter-analyze"`, `"flutter-test"`, and `"flutter-run"`.
 
 In `group`: A string or an object that specifies the group to which the task belongs.
 

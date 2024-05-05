@@ -1,8 +1,12 @@
 # PostgreSQL
 
+This documentation is about using the psql command line.
+
 Check to see if its already installed using `dpkg -l postgresql`
 
-If not installed, use sudo apt update to refresh package lists and then sudo apt install postgresql postgresql-contrib to install the server and additional tools.
+If not installed, use sudo apt update to refresh package lists and then `sudo apt install postgresql postgresql-contrib` to install the server and additional tools.
+
+## Connecting to a PostgreSQL server and or database
 
 To connect to PostgreSQL, the command in the console/terminal/shell is `psql -U postgres`
 
@@ -45,7 +49,7 @@ To create a new user, `createuser -s <username> (replace <username>` with your d
 
 `psql -c "ALTER USER <username> WITH PASSWORD '<password>';"` (replace <username> and <password> accordingly)
 
-`sudo -u postgres createuser --interactive --pwprompt` will use the interative prompts to create a user.
+`sudo -u postgres createuser --interactive --pwprompt` will use the interactive prompts to create a user.
 
 In order to change to the postgresql user, `sudo su - postgres`
 
@@ -68,38 +72,43 @@ Typing `quit` of `\q` in psql will exit. `exit` should work too.
 ## PostgreSQL flags
 
 Missing flags in this list either did not work, did not return anything when used or simply do not exist, returned as invalid option, etc.
+Some flags are the same whether used lower or upper but a few are not.  There are also a few flags that only exist in one case or the other but not both
 
-`psql -a` seems to start the repl
-`psql -b` seems to start the repl
-`psql -c` requires an argument
-`psql -d` requires an argument
+### Lowercase flags
+
+`psql -a` seems to start the repl if used by itself. Cant find any information about this. May not be used at all?
+`psql -b` seems to start the repl if used by itself. (possibly no longer used post version 8.0)
+`psql -c` requires an argument. This allows you to execute a single SQL statement and then exit the psql client. Must use commands between double quotes
+`psql -d` requires an argument. used to specify the  database you want to connect to after launching the psql client. `psql -d <database_name>`
 `psql -f` requires an argument
-`psql -h` hostname
+`psql -h` this sets the hostname
 `psql -l` lists the databases as a table
 `psql -n` seems to start the repl
 `psql -o` requires an argument
-`psql -p` port
+`psql -p` This sets the port number, usually this follows the `-h` flag.
 `psql -q` seems to start the repl but without version or help information.
 `psql -s` seems to start the repl
-`psql -t` seems to start the repl
-`psql -v` requires an argument
-`psql -w` seems to start the repl
-`psql -x` seems to start the repl
-`psql -z` seems to start the repl
+`psql -t` seems to start the repl if used by itself. used to format your query results in a tabular format.
+`psql -v` requires an argument. used to define and set environment variables within your psql session. Different from `-V`
+`psql -w` seems to start the repl if used by itself. Used to force write mode when connecting to the server
+`psql -x` seems to start the repl if used by itself. Turns on extended mode. Deprecated?
+`psql -z` seems to start the repl if used by itself.  Might disable ssl mode? Deprecated?
 
-`psql -A` seems to start the repl
-`psql -E` seems to start the repl
-`psql -F` requires an argument
-`psql -H` seems to start the repl
-`psql -L` requires a argument
-`psql -P` requires a argument
-`psql -R` requires a argument
-`psql -S` seems to start the repl
-`psql -T` requires a argument
+### Uppercase flags
+
+`psql -A` seems to start the repl.  Might display query results in a single line format.
+`psql -E` seems to start the repl if used by itself. Enables echo mode. Useful for debugging or record keeping.
+`psql -F` requires an argument. `psql -F <separator> [<query>]` and used to format the output of your query results in a specific way
+`psql -H` seems to start the repl if used by itself.  Flag used to set the hostname. `psql -H <hostname>`
+`psql -L` requires a argument. Used to list all the available databases on the server you're connected to
+`psql -P` requires a argument. This sets the port number, usually this follows the `-H` flag.
+`psql -R` requires a argument. Unable to find information about this.
+`psql -S` seems to start the repl if used by itself. `psql -S <socket_file_path>` or `psql -S /tmp/postgres.sock -U postgres -d mydb`
+`psql -T` requires a argument. used to format your query results in a tabular format
 `psql -U` flag for username
-`psql -V` reports something like `psql (PostgreSQL) 16.2 (Debian 16.2-1.pgdg100+1)`
+`psql -V` reports version information, something like `psql (PostgreSQL) 16.2 (Debian 16.2-1.pgdg100+1)`
 `psql -W` prompts for a password `Password:`
-`psql -X` seems to the repl
+`psql -X` seems to start the repl if used by itself. Might turn on extended mode and may be also used in place of `-x`. Deprecated?
 
 ## Other commands
 
@@ -110,3 +119,7 @@ Missing flags in this list either did not work, did not return anything when use
 \h or \help: Get help on psql commands and syntax (can be followed by a specific command for detailed help)
 \set <variable_name> <value>: Set psql variables to control behavior (e.g., \set ECHO all to echo all commands)
 \pset format <format>: Set output formatting for query results (e.g., \pset format aligned for aligned output)
+
+## Other stuff
+
+`psql -H 192.168.1.100 -U postgres -d mydb`

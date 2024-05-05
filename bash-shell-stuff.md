@@ -1,4 +1,4 @@
-## Create a bash shell
+# bash shell script
 
 Open the terminal window: This is where you'll create the script.
 

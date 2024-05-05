@@ -1,30 +1,112 @@
+# PostgreSQL
+
+Check to see if its already installed using `dpkg -l postgresql`
+
+If not installed, use sudo apt update to refresh package lists and then sudo apt install postgresql postgresql-contrib to install the server and additional tools.
 
 To connect to PostgreSQL, the command in the console/terminal/shell is `psql -U postgres`
 
-To create a Database, use `CREATE DATABASE databasename`
+Another way you can do it is `psql -h <host> -p <port> -U <username> -d <database_name>`
 
-This command connects to the "gbowne1" database using the "gbowne1" user
+just replace those placeholders,
+
+    <host>: The server hostname or IP address (usually localhost)
+    <port>: The PostgreSQL port (usually 5432)
+    <username>: The username you created
+    <database_name>: The database name you created
+
+## Create a database
+
+`createdb <database_name>`(replace <database_name> with your desired database name)
+
+To create a Database with SQL, use `CREATE DATABASE databasename`
+
+The following command connects to the "gbowne1" database using the "gbowne1" user
 
 `psql -d gbowne1 -U gbowne1`
 
 In Sysvinit, the command to start the PostgreSQL service is: `sudo service postgresql stop` or `sudo service postgresql start`
 
-Normally, PostgreSQL requires systemd to run.
+Normally, PostgreSQL requires systemd to run.  You are better off using sysvinit.
 
 `sudo -u postgres psql -c "COMMAND IN HERE;"`  will issue a SQL syntax.
 
 All CREATE sql commands must end with a ;
 
-The PostgreSQL port is 5432
+The PostgreSQL default port is 5432, make sure it is enabled in your firewall if you need a remote access.
 
-`sudo -u postgres createdb database will create a gbowne1 database.
+`sudo -u postgres createdb` database will create a gbowne1 database.
 
 `\du` will list the users
 
+## Creating or altering a user
+
+To create a new user, `createuser -s <username> (replace <username>` with your desired username)
+
+`psql -c "ALTER USER <username> WITH PASSWORD '<password>';"` (replace <username> and <password> accordingly)
+
 `sudo -u postgres createuser --interactive --pwprompt` will use the interative prompts to create a user.
+
+In order to change to the postgresql user, `sudo su - postgres`
+
+## Configuration files
 
 The PostgreSQL has several configuration files:
 
 - pg_hba.conf
 - postgresql.conf
--
+- pg_ident.conf
+
+Main configuration file: /etc/postgresql/<version>/main/postgresql.conf (e.g., /etc/postgresql/14/main/postgresql.conf for version 14)
+Authentication configuration: /etc/postgresql/<version>/main/pg_hba.conf
+User and group definitions: /etc/postgresql/<version>/main/pg_ident.conf
+
+## Exiting psql
+
+Typing `quit` of `\q` in psql will exit. `exit` should work too.
+
+## PostgreSQL flags
+
+Missing flags in this list either did not work, did not return anything when used or simply do not exist, returned as invalid option, etc.
+
+`psql -a` seems to start the repl
+`psql -b` seems to start the repl
+`psql -c` requires an argument
+`psql -d` requires an argument
+`psql -f` requires an argument
+`psql -h` hostname
+`psql -l` lists the databases as a table
+`psql -n` seems to start the repl
+`psql -o` requires an argument
+`psql -p` port
+`psql -q` seems to start the repl but without version or help information.
+`psql -s` seems to start the repl
+`psql -t` seems to start the repl
+`psql -v` requires an argument
+`psql -w` seems to start the repl
+`psql -x` seems to start the repl
+`psql -z` seems to start the repl
+
+`psql -A` seems to start the repl
+`psql -E` seems to start the repl
+`psql -F` requires an argument
+`psql -H` seems to start the repl
+`psql -L` requires a argument
+`psql -P` requires a argument
+`psql -R` requires a argument
+`psql -S` seems to start the repl
+`psql -T` requires a argument
+`psql -U` flag for username
+`psql -V` reports something like `psql (PostgreSQL) 16.2 (Debian 16.2-1.pgdg100+1)`
+`psql -W` prompts for a password `Password:`
+`psql -X` seems to the repl
+
+## Other commands
+
+\l or \list: List available databases
+\du or \list users: List database users
+\connect <database_name>
+\q or \quit: Exit the psql REPL
+\h or \help: Get help on psql commands and syntax (can be followed by a specific command for detailed help)
+\set <variable_name> <value>: Set psql variables to control behavior (e.g., \set ECHO all to echo all commands)
+\pset format <format>: Set output formatting for query results (e.g., \pset format aligned for aligned output)

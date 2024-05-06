@@ -65,12 +65,12 @@ The PostgreSQL has several configuration files:
 - postgresql.conf
 - pg_ident.conf
 
-The config files live in /var/lib/postgresql, but could be in /etc/postgresql
+The config files live in `/var/lib/postgresql`, but could also be in `/etc/postgresql`
+
 Client configs locally may probably be stored in an rc file at ~/.psqlrc
 
-Main configuration file: /etc/postgresql/<version>/main/postgresql.conf (e.g., /etc/postgresql/14/main/postgresql.conf for version 14)
-Authentication configuration: /etc/postgresql/<version>/main/pg_hba.conf
-User and group definitions: /etc/postgresql/<version>/main/pg_ident.conf
+These configuration files are located in `/etc/postgresql/<version>/main/` each version of postgresql you have installed will have their own
+configuration files. (replace or substitute `<version>` with whatever version number you have installed).
 
 There are some parameters that `postgresql.conf` uses:
 
@@ -82,7 +82,17 @@ There are some parameters that `postgresql.conf` uses:
 - pg_hba_conf
 - log_level
 - log_line_prefix
+- log_filename
 - log_destination
+- work_mem
+- logging_collector
+- bgwriter_delay
+- maintenance_work_mem
+- effective_cache_size
+
+You can use the `ALTER SYSTEM` command with some care taken, to change some behavior.
+
+Make sure you stop and/or restart PostgreSQL after applying changes. It's also wise to make a back up to restore to.
 
 ## Exiting psql
 
@@ -160,11 +170,17 @@ Some flags are the same whether used lower or upper but a few are not.  There ar
 ## Other commands
 
 \l or \list: List available databases
+
 \du or \list users: List database users
+
 \connect <database_name>
+
 \q or \quit: Exit the psql REPL
+
 \h or \help: Get help on psql commands and syntax (can be followed by a specific command for detailed help)
+
 \set <variable_name> <value>: Set psql variables to control behavior (e.g., \set ECHO all to echo all commands)
+
 \pset format <format>: Set output formatting for query results (e.g., \pset format aligned for aligned output)
 
 ## Other stuff

@@ -21,3 +21,21 @@ Here is a basic Python 3 Hello World
    ```py
    print("Hello, World!")
    ```
+
+## Python program structure
+
+From top to bottom, a typical Python program will have;
+
+a shebang line #!/usr/bin/env python  This is optional.  It is only required if you plan to execute the script directly from the command line.
+
+next if you are documenting the program, using `#` to comment and document the program
+
+After the shebang line, one imports Python modules with `import`
+
+Next, global variables are defined as in something like `GLOBAL_VARIABLE = "This is a global variable"`
+
+After global variables next comes the function definitions using a `def`
+
+If you are using OOP, next you would do some class definitions with `class`
+
+last would be a main execution block with `if __name__ == "__main__":`

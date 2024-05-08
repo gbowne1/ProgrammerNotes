@@ -15,3 +15,5 @@ Make the script executable: Use the `chmod +x` command to make the script execut
 Run the script: You can run the script by using the ./ notation followed by the script name. For example, you can use the command `./scriptname.sh` to run the script called scriptname.sh.
 
 These are the basic steps to create a bash shell script. You can then add more advanced features and functionality as needed.
+
+// TODO  ulimit -a shows system limits

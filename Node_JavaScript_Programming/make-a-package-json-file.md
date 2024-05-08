@@ -112,4 +112,4 @@ In a package.json file, the:
 
 ## Some other notes
 
-"eslintConfig" must be in JSON
+"eslintConfig" must be in JSON.

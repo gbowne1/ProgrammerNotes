@@ -30,14 +30,14 @@ This is a list of packages commonly installed in NodeJs and React projects
 "@hapi/boom": "^10.0.1", HTTP-friendly error objects
 "@hookform/resolvers": "^3.3.1",
 "@mui/base": "^5.0.0-alpha.110",
-"@mui/icons-material": "^5.11.0",
+"@mui/icons-material": "^5.11.0", Material UI icons package
 "@mui/icons-material": "^5.11.16",
 "@mui/icons-material": "^5.14.3",
 "@mui/icons-material": "^5.14.9",
 "@mui/icons-material": "^5.15.13",
 "@mui/icons-material": "^5.15.15",
 "@mui/lab": "^5.0.0-alpha.145",
-"@mui/material": "^5.11.0",
+"@mui/material": "^5.11.0", \   asdfasdfasdfasdfasdfasdf
 "@mui/material": "^5.12.3",
 "@mui/material": "^5.13.0",
 "@mui/material": "^5.13.5",
@@ -212,7 +212,7 @@ This is a list of packages commonly installed in NodeJs and React projects
 "supertest": "^6.3.4", SuperAgent driven library for testing HTTP servers
 "sweetalert2": "^11.7.28", A beautiful, responsive, customizable and accessible (WAI-ARIA) replacement for .js popup boxes, supported fork of sweetalert
 "tmi.js": "^1.8.4",
-"typescript": "4.9.4": Self explanatory.  
+"typescript": "4.9.4": Self explanatory.
 "uuid": "^9.0.0", RFC4122 (v1, v4, and v5) UUIDs
 "web-vitals": "^2.1.4" Easily measure performance metrics in JavaScript
 "web-vitals": "^3.3.1"

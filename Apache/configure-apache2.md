@@ -1,6 +1,5 @@
 # Configuring Apache2
 
-
 ## Virtual Hosts
 
 An Apache2 virtual host is a powerful feature that allows you to host multiple websites (or applications) on a single server using a single Apache2 instance. It essentially tricks your server into thinking it's serving content from multiple machines, even though it's all on the same physical hardware.

@@ -8,7 +8,9 @@ Check the version of tmux with `tmux -V`
 
 There is a configuration file used. It is `~/.tmux.conf`
 
-there is documentation at `man tmux`
+there is documentation at `man tmux`.
+
+The github is at <https://github.com/tmux/tmux>
 
 Systemwide configruation is at `/etc/tmux.conf`
 

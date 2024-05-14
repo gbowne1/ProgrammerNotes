@@ -52,12 +52,17 @@ My ld is GNU ld (GNU Binutils for Debian) 2.31.1.
 
 ## untested flags
 
-ld -T       used to specifiy the linker file used
-ld -o       Specifies the name of the output file (executable or library) to be generated
-ld -l       Links against the specified library, searching for it in the standard library directories.
-ld -pie     Creates a position-independent executable (PIE), which can be loaded at any address in memory
-ld -u       Prevents garbage collection of the specified external symbol.
-ld -L       Adds a directory to the library search path.
+- ld -T       used to specifiy the linker file used
+
+- ld -o       Specifies the name of the output file (executable or library) to be generated
+
+- ld -l       Links against the specified library, searching for it in the standard library directories.
+
+- ld -pie     Creates a position-independent executable (PIE), which can be loaded at any address in memory
+
+- ld -u       Prevents garbage collection of the specified external symbol.
+
+- ld -L       Adds a directory to the library search path.
 
 ## Use of ld
 

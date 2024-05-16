@@ -12,7 +12,7 @@ These are some of the things I have learned doing web development and creating .
 
 Hopefully this will help you with some baseline knowledge, that may at least help you debug some issues.
 
-## HTML 5 symantic tags
+## HTML 5 semantic tags
 
 `<nav>`
 `<aside>`

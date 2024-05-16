@@ -44,13 +44,13 @@ The basic tags are:
 
 The tags used to structure the page(s) in HTML are called semantic tags. These are block level elements
 
-<header>
-<footer>
-<aside>
-<article>
-<section>
-<nav>
-<main>
+`<header>`
+`<footer>`
+`<aside>`
+`<article>`
+`<section>`
+`<nav>`
+`<main>`
 
 ## Projects and what to make
 

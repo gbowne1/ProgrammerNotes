@@ -102,6 +102,7 @@ Typing `quit` of `\q` in psql will exit. `exit` should work too.
 
 Missing flags in this list either did not work, did not return anything when used or simply do not exist, returned as invalid option, etc.
 Some flags are the same whether used lower or upper but a few are not.  There are also a few flags that only exist in one case or the other but not both
+These flags are only used at the bash or shell prompt, not the repl.
 
 ### Lowercase flags
 
@@ -117,7 +118,7 @@ Some flags are the same whether used lower or upper but a few are not.  There ar
 
 `psql -h` this sets the hostname
 
-`psql -l` lists the databases as a table
+`psql -l` lists the databases as a table. This does not work in the command line. only in the repl.
 
 `psql -n` seems to start the repl. Deprecated? Possibly a command that got removed/added around version 10.
 
@@ -185,4 +186,35 @@ Some flags are the same whether used lower or upper but a few are not.  There ar
 
 ## Other stuff
 
+Here are some `\` commands that can be used inside the psql repl, at the `usernamehere=#` prompt.
+
+\a says Output format is unaligned
+\c reports what user is currently connected to which database(s)
+\d usually reports whether it can find any relations
+\e lets the user change their editor
+\f shows the user their field separator
+\h shows the avaliable SQL commands which have help associated with them
+\i says it needs an argument, unknown right now what that argument is
+\l lists the currentdatabases
+\p usually says the query buffer is empty
+\q exits psql
+\r resets the query buffer
+\s shows command history in the current user(s) database(s)? press q to exit this
+\t says Tuples is on
+\w needs an argument unsure what the argument needed is
+\x says expanded display is on
+
+\C says Title is unset
+\H says output format is html
+\T is almost the same as \t but it says Table attuributes are unset
+
+Also try out something like:
 `psql -H 192.168.1.100 -U postgres -d mydb`
+
+## untested commands and flags
+
+at the `username=#` prompt in the repl;
+
+\o doesn't return invalid option
+\z doesn't return invalid option, it seems to print a blank line under it
+\g doesn't return invalid option.

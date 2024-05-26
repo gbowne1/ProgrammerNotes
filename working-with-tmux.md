@@ -14,6 +14,18 @@ The github is at <https://github.com/tmux/tmux>
 
 Systemwide configruation is at `/etc/tmux.conf`
 
+## shell flags used with tmux
+
+used with `tmux`, these flags return results:
+
+-c requires an argument
+-d ?
+-f requires an argument
+-l starts tmux
+-q starts tmux
+-u starts tmux
+-v starts tmux
+
 ## tmux commands
 
 tmux comes with a comprehensive set of built-in commands for various purposes. These commands are typically prefixed with the configured prefix key (default: Ctrl + b) followed by a single key. Here are some common examples:

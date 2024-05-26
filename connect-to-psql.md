@@ -188,25 +188,41 @@ These flags are only used at the bash or shell prompt, not the repl.
 
 Here are some `\` commands that can be used inside the psql repl, at the `usernamehere=#` prompt.
 
-\a says Output format is unaligned
-\c reports what user is currently connected to which database(s)
-\d usually reports whether it can find any relations
-\e lets the user change their editor
-\f shows the user their field separator
-\h shows the avaliable SQL commands which have help associated with them
-\i says it needs an argument, unknown right now what that argument is
-\l lists the currentdatabases
-\p usually says the query buffer is empty
-\q exits psql
-\r resets the query buffer
-\s shows command history in the current user(s) database(s)? press q to exit this
-\t says Tuples is on
-\w needs an argument unsure what the argument needed is
-\x says expanded display is on
+- \a says Output format is unaligned
 
-\C says Title is unset
-\H says output format is html
-\T is almost the same as \t but it says Table attuributes are unset
+- \c reports what user is currently connected to which database(s)
+
+- \d usually reports whether it can find any relations
+
+- \e lets the user change their editor
+
+- \f shows the user their field separator
+
+- \h shows the avaliable SQL commands which have help associated with them
+
+- \i says it needs an argument, unknown right now what that argument is
+
+- \l lists the currentdatabases
+
+- \p usually says the query buffer is empty
+
+- \q exits psql
+
+- \r resets the query buffer
+
+- \s shows command history in the current user(s) database(s)? press q to exit this
+
+- \t says Tuples is on
+
+- \w needs an argument unsure what the argument needed is
+
+- \x says expanded display is on
+
+- \C says Title is unset
+
+- \H says output format is html
+
+- \T is almost the same as \t but it says Table attuributes are unset
 
 Also try out something like:
 `psql -H 192.168.1.100 -U postgres -d mydb`

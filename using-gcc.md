@@ -11,35 +11,36 @@ these were tested by doing each flag individually. These may or may not be docum
 
 `-c` = Might need input files. instructs the compiler to perform a compilation but stop before linking
 
-`-d` = Needs argument(s)
+`-d` = Needs argument(s). can be used several ways. does dissasembly,  specifies a directory to search for
+header files or provides additional debugging information.
 
-`-e` = Needs argument(s)
+`-e` = Needs argument(s). used to emit preprocessed source code. `gcc -e myprogram.c -o myprogram.i`
 
-`-g` = Might need input files, used for debugging
+`-g` = Might need input files, used to enable debugging information `gcc -g myprogram.c -o myprogram`
 
-`-h` = Needs argument(s)
+`-h` = Needs argument(s). display a brief help message
 
-`-l` = Needs argument(s)
+`-l` = Needs argument(s). used to link your program with a specific library `gcc -l<library_name> myprogram.c -o myprogram`
 
-`-n` = Might need input files
+`-n` = Might need input files? not a standard option.
 
-`-o` = Needs a filename after -o. This is used for output file(s)
+`-o` = Needs a filename after -o. used to specify the output filename for the compiled program. `gcc -o output_filename source_file.c`
 
-`-p` = Might need input files
+`-p` = Might need input files. not a standard option
 
-`-r` = Might need input files
+`-r` = Might need input files. not a standard option
 
-`-s` = Might need input files
+`-s` = Might need input files. can be used several different ways.
 
 `-t` = Might need input files
 
-`-v` = Prints version stack
+`-v` = used to print the compiler version information and the command line used for compilation. `gcc -v myprogram.c -o myprogram`
 
-`-w` = Might need input files
+`-w` = Might need input files. used to suppress warnings during compilation
 
-`-x` = Needs argument(s)
+`-x` = Needs argument(s). used to specify the language of the source code file `gcc -x <language> <source_file> -o <output_file>`
 
-`-z` = Needs arguments
+`-z` = Needs arguments. used to enable optimizations specific to embedded systems `gcc -z <optimization_option> <source_file> -o <output_file>`
 
 ### Uppercase flags
 

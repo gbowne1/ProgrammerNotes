@@ -6,6 +6,8 @@ My tests were done with doing these flags individually on a single command line.
 
 My ld is GNU ld (GNU Binutils for Debian) 2.31.1.
 
+My ld comes from /usr/bin/ld.gold /usr/bin/ld /usr/bin/ld.bfd /usr/share/man/man1/ld.1.gz
+
 ### Lowercase flags
 
 - ld -d   `ld: no input files` used to enable dynamic linking of libraries. tells the linker to generate dynamic rather than static object files

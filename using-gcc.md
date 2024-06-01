@@ -1,5 +1,7 @@
 # Using GCC
 
+My gcc is currently in /usr/bin/gcc /usr/lib/gcc and is gcc version 8.3.0 (Debian 8.3.0-6)
+
 ## Important Flags
 
 There are some important flags that can be used with GCC to compile C programs.
@@ -7,22 +9,36 @@ these were tested by doing each flag individually. These may or may not be docum
 
 ### Lowercase flags
 
-===============================================================
 `-c` = Might need input files. instructs the compiler to perform a compilation but stop before linking
+
 `-d` = Needs argument(s)
+
 `-e` = Needs argument(s)
+
 `-g` = Might need input files, used for debugging
+
 `-h` = Needs argument(s)
+
 `-l` = Needs argument(s)
+
 `-n` = Might need input files
+
 `-o` = Needs a filename after -o. This is used for output file(s)
+
 `-p` = Might need input files
+
 `-r` = Might need input files
+
 `-s` = Might need input files
+
 `-t` = Might need input files
+
 `-v` = Prints version stack
+
 `-w` = Might need input files
+
 `-x` = Needs argument(s)
+
 `-z` = Needs arguments
 
 ### Uppercase flags

@@ -4,7 +4,7 @@ Using the ls command Anything not in this list doesn't return anything.  My ls c
 
 ## Flags
 
-### Uppercase flags
+### Lowerrcase flags
 
 `ls -a` directory listing in two columns. this only includes dotfiles.
 

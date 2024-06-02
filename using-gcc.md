@@ -46,26 +46,47 @@ header files or provides additional debugging information.
 
 ====================================================================
 -A = Needs assertions. Possibly use for target architecture
+
 -B = Needs argument(s)
+
 -C = Might need input files
+
 -D = Macro name missing after -D, for PreProcesor Macros
+
 -E = Might need input files
+
 -F = Needs a path after this flag
+
 -H = Might need input files
+
 -I = Needs a path after this flag
+
 -J = Needs argument(s)
+
 -L = Needs argument(s)
+
 -M = Might need input files
+
 -N = Might need input files
+
 -O = Might need input files
+
 -P = Might need input files
+
 -Q = Might need input files
+
 -R = Needs argument(s)
+
 -S = Might need input files
+
 -T = Needs argument(s)
+
 -U = Macro name missing after -U
+
 -W = Might need input files
+
 -X = Might need input files
+
 -Z = Might need input files
 
 ## Optimization

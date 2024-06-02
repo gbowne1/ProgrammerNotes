@@ -15,7 +15,7 @@ My version of find comes from /usr/bin/find /usr/share/man/man1/find.1.gz /usr/s
 
 find -a says `find: invalid expression; you have used a binary operator '-a' with nothing before it.`
 
-find -d says `ind: warning: the -d option is deprecated; please use -depth instead, because the latter is a POSIX-compliant feature.`
+find -d says `find: warning: the -d option is deprecated; please use -depth instead, because the latter is a POSIX-compliant feature.`
 
 find -o says `find: invalid expression; you have used a binary operator '-o' with nothing before it.`
 

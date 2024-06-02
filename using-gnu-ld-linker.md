@@ -54,7 +54,7 @@ My ld comes from /usr/bin/ld.gold /usr/bin/ld /usr/bin/ld.bfd /usr/share/man/man
 
 ## untested flags
 
-- ld -T       used to specifiy the linker file used
+- ld -T       used to specify the linker file used
 
 - ld -o       Specifies the name of the output file (executable or library) to be generated
 

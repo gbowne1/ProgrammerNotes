@@ -7,11 +7,13 @@ My gcc is currently in /usr/bin/gcc /usr/lib/gcc and is gcc version 8.3.0 (Debia
 There are some important flags that can be used with GCC to compile C programs.
 these were tested by doing each flag individually. These may or may not be documented.
 
+using GNU g++ (for C++) may use these same flags as gcc.
+
 ### Lowercase flags
 
 `-c` = Might need input files. instructs the compiler to perform a compilation but stop before linking
 
-`-d` = Needs argument(s). can be used several ways. does dissasembly,  specifies a directory to search for
+`-d` = Needs argument(s). can be used several ways. does disassembly,  specifies a directory to search for
 header files or provides additional debugging information.
 
 `-e` = Needs argument(s). used to emit preprocessed source code. `gcc -e myprogram.c -o myprogram.i`

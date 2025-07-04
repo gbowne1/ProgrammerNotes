@@ -6,6 +6,14 @@ Check to see if its already installed using `dpkg -l postgresql`
 
 If not installed, use sudo apt update to refresh package lists and then `sudo apt install postgresql postgresql-contrib` to install the server and additional tools.
 
+I strongly advice making a backup of this file just in case.
+
+you can use `ALTER SYSTEM` to make changes.
+
+To reload, `SELECT pg_reload_conf();` will reload the configuration.
+
+Should you want to see any variable, use `SHOW` and the variable name.
+
 ## Connecting to a PostgreSQL server and or database
 
 To connect to PostgreSQL, the command in the console/terminal/shell is `psql -U postgres` but this will only connect using the `postgres` user.
@@ -74,7 +82,7 @@ configuration files. (replace or substitute `<version>` with whatever version nu
 
 There are some parameters that `postgresql.conf` uses:
 
-- listen_addresses
+- listen_addresses 
 - port
 - shared_buffers
 - max-connections
@@ -89,10 +97,20 @@ There are some parameters that `postgresql.conf` uses:
 - bgwriter_delay
 - maintenance_work_mem
 - effective_cache_size
+- random_page_cost
+- hba_file
+- ident_file
+- bgwriter_delay
+- bgwriter_lru_maxpages
+
+
+The important ones are listen_addresses, port and max-connection. You could ignore the rest.
+effective_cache_size should be 50-75% of total system RAM.
 
 You can use the `ALTER SYSTEM` command with some care taken, to change some behavior.
 
 Make sure you stop and/or restart PostgreSQL after applying changes. It's also wise to make a back up to restore to.
+
 
 ## Exiting psql
 
@@ -173,6 +191,56 @@ These flags are only used at the bash or shell prompt, not the repl.
 \l or \list: List available databases
 
 \du or \list users: List database users
+
+\d              -- List tables, views, and sequences in the current schema
+
+\d+             -- Same as \d, but includes size and extra info
+
+\d tablename    -- Describe a table's columns and types
+
+\d+ tablename   -- Same, with size, storage, and other details
+
+\dt             -- List only tables
+
+\dt+            -- Tables with size info
+
+\dv             -- List only views
+
+\dv+            -- Views with additional info
+
+\di             -- List indexes
+
+\di+            -- Indexes with size and details
+
+\ds             -- List sequences
+
+\ds+            -- Sequences with more info
+
+\df             -- List functions
+
+\df+            -- Functions with details like source and return types
+
+\da             -- List aggregate functions
+
+\dn             -- List schemas
+
+\dT             -- List data types
+
+\dT+            -- Data types with size/storage details
+
+\dc             -- List conversions (used in encoding/locale work)
+
+\dC             -- List casts (type-to-type conversions)
+
+\dd             -- List object descriptions/comments
+
+\ddp            -- Show default privileges
+
+\dL             -- List large objects (LOBs)
+
+\du or \dg      -- List roles and users
+
+\l or \list     -- List databases (not strictly a \d command)
 
 \connect <database_name>
 

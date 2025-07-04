@@ -1,5 +1,7 @@
 # About using aria in Web Development projeccts.
 
+ARIA (Accessible Rich Internet Applications) attributes enhance the accessibility of dynamic content and complex UI components, especially for users relying on assistive technologies like screen readers.
+
 The most commonly used ARIA attributes are those that help to improve the accessibility of dynamic content, interactive widgets, and complex user interfaces. These attributes are particularly useful for making web applications more accessible to users with disabilities, especially those who rely on assistive technologies like screen readers.  There are tons of these attributes.  This is not intended to be a complete list of attributes.
 
 Here's a list of the most commonly used ARIA attributes.
@@ -33,3 +35,7 @@ Here's a list of the most commonly used ARIA attributes.
     aria-valuemin, aria-valuemax, aria-valuenow, aria-valuetext: These attributes are used with range inputs like sliders and progress bars to provide information about the current value, minimum value, maximum value, and the text equivalent of the current value.
 
     aria-live: Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region. This is crucial for dynamic content that changes over time.
+
+Roles in aria are equally important. See: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles
+
+There are also `Landmark` roles, `Document` roles, `Widget` roles, `Structure` roles. `Abstract` roles.

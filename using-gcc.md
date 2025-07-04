@@ -32,7 +32,7 @@ header files or provides additional debugging information.
 
 `-r` = Might need input files. not a standard option
 
-`-s` = Might need input files. can be used several different ways.
+`-s` = Might need input files. can be used several different ways. strips symbols
 
 `-t` = Might need input files
 
@@ -47,45 +47,45 @@ header files or provides additional debugging information.
 ### Uppercase flags
 
 ====================================================================
--A = Needs assertions. Possibly use for target architecture
+-A = Needs assertions. Possibly use for target architecture, but this controls pre-processor assertions.
 
--B = Needs argument(s)
+-B = Needs argument(s) but specifies alternate compiler toolchain locations.
 
--C = Might need input files
+-C = Might need input files. Keeps comments during processing?
 
 -D = Macro name missing after -D, for PreProcesor Macros
 
--E = Might need input files
+-E = Might need input files.  Preprocess only; do not compile or link.
 
--F = Needs a path after this flag
+-F = Needs a path after this flag, Specify a path for certain files.
 
--H = Might need input files
+-H = Might need input files. Print the names of header files included.
 
--I = Needs a path after this flag
+-I = Needs a path after this flag, Add a directory to the list of directories to be searched for header files.
 
--J = Needs argument(s)
+-J = Needs argument(s) Used for parallel builds; needs specific arguments.
 
--L = Needs argument(s)
+-L = Needs argument(s) Add a directory to the library search path.
 
--M = Might need input files
+-M = Might need input files Generate makefile dependencies.
 
 -N = Might need input files
 
--O = Might need input files
+-O = Might need input files,  Set optimization level (e.g., -O0, -O1, -O2, -O3, -Os, -Ofast).
 
--P = Might need input files
+-P = Might need input files Preprocess only; do not include line numbers in the output
 
--Q = Might need input files
+-Q = Might need input files. Print information about the compiler's internal workings.
 
 -R = Needs argument(s)
 
--S = Might need input files
+-S = Might need input files Compile to assembly language
 
--T = Needs argument(s)
+-T = Needs argument(s), Specify a linker script
 
--U = Macro name missing after -U
+-U = Macro name missing after -U ; undefine a pre-processor macro
 
--W = Might need input files
+-W = Might need input files. -W <warning> enable specific warnings
 
 -X = Might need input files
 

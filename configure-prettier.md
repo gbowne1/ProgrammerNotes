@@ -46,7 +46,7 @@ Here is an example `.prettierrc` which you can code in JSON or YAML..
       "ignorePath": ".prettierignore",
       "useTabs": false,
       "rangeStart": 0,
-      "jsxBracketSameLine": true,    (using jsxBraketSameLine is deprecated)
+      "jsxBracketSameLine": true,    (using jsxBraketSameLine is deprecated, use "bracketSameLine": true)
       "requirePragma": true,
       "vueIndentScriptAndStyle": true,
       "parser": babel",
@@ -59,7 +59,6 @@ Here is an example `.prettierrc` which you can code in JSON or YAML..
         }
       ],
       "plugins": ["prettier-plugin-foo"],
-      "react/jsx-max-props-per-line": [1, { "when": "always" }]
     }
 
 I prefer JSON.  There could be more settings.  This covers most of them.  Most of the settings are or at least should be somewhat self-explanatory

@@ -39,3 +39,29 @@ After global variables next comes the function definitions using a `def`
 If you are using OOP, next you would do some class definitions with `class`
 
 last would be a main execution block with `if __name__ == "__main__":`
+
+`def` is used to define a function
+
+`if` starts a conditional statement
+
+`for` starts a loop
+
+`return` returns a value from a function
+
+`class` is used to define a OOP class in Python
+
+`while` starts a loop
+
+`in` checks a conditon
+
+`else` conditional
+
+`elif` conditional
+
+`with` 
+
+`try` is a exception handling block
+
+## installing packages, modules, libraries
+
+pip installs modules, packages and libraries in python.

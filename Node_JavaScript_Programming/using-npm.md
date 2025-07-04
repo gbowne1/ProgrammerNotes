@@ -14,9 +14,13 @@
 `npm version <new_version>` -- updates the semver version listing in your package.json to whatever <new_version> you specify.
 `npm i <package_name` -- short version of npm install.
 `npm install <package_name>` installs the package specified.
+`npm install -D <package_name>` installs the package as a `devDependency` same as `--save-dev`
 `npm install -g <package_name>` Installs a package globally, making it available across all your Node.js projects on your system
 `npm uninstall <package_name>` removes a ppackage and its update from package.json
 `npm view <package_name>`
 `npm prune <package_name>`
 `npm show` -- similar to npm view
-
+`npm init -y` 
+`npm publish`
+`npm pack`
+`npm dedupe`
